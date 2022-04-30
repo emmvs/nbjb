@@ -1,0 +1,34 @@
+<!-- app/views/dashboards/overview.html.erb -->
+
+<h1>Dashboard</h1>
+<section class="container-dashboard">
+  <h1 class="font-alpha dashboard__title ">Hi, Player!</h1>
+  <div class="sign-card--dashboard">
+    <div class="tag2 tag--video">
+      <h2 class="dashboard__video font-gamma">Your lastest Game</h2>
+      <%# <% if current_user.signs != [] && current_user.signs.last.video.attached? %>
+          <%# <p class="sign-name font-zeta"><%= current_user.signs.last.title %></p>
+        <%# <div class="video-sign-container"> %>
+          <%# <%= cl_video_tag(current_user.signs.last.video.key, :controls=>false, :autoplay=>true, :loop=>true, :muted=>true, :width=>220, :height=>150, class:"video")%>
+        <%# </div> %>
+      <%# <% else %>
+       <%# <p class="sign-name">No signs yet</p> %>
+       <%# <% end %>
+        <%# <div class="sign-buttons">
+        <%= link_to "New Sign", new_sign_path, class: "dashboard-button btn--normal" %>
+      <%# </div> %>
+    <%# </div> %>
+    <%# <div class="tag2 tag--description"> %>
+      <%# <div class="dashboard__texts"> %>
+        <%# <h3 class="sign__display font-gamma">Your 5 favorite signs</h3> %>
+        <%# <div class="bookmark-list"> %>
+        <%# <% current_user.bookmarks.last(5).each do |bookmark| %>
+          <%# <div class="bookmark-item"> %>
+            <%# <%= link_to "#{bookmark.sign.title}", sign_path(bookmark.sign), class: "dashboard-button btn--normal" %>
+          <%# </div> %>
+        <%# <% end %>
+        <%# </div> %>
+      <%# </div> %>
+    </div>
+  </div>
+</section>
