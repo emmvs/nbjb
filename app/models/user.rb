@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :nights
   has_many :games
-  has_many :bitchbooks
+  has_many :bitch_book_entries
   has_many :places
 end
