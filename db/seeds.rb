@@ -15,11 +15,34 @@ puts "Database is clean! 🧼"
 
 User.create!(
   # username: "Emma",
-  # bio: "Hello, I'm Emma and this is my amazing Bio",
+  # birthday
+  # first_game
+  # astro_sign
+  # favorite_drink
+  # lucky_number
+  # bio: "Hello, I'm Emma and I am the Founder of NBJB",
   email: "emma@test.com",
   password: "123456",
   # language: 1,
-  # phone_number: "+90123456789",
+  # phone_number: "+4915785519243",
 )
 
-puts "🤟🏻🤟🏼🤟🏽🤟🏾🤟🏿 Amazing! We are done 🤟🏻🤟🏼🤟🏽🤟🏾🤟🏿"
+User.create!(
+  # username: "Marlene",
+  # bio: "Hello, I'm Marlene and I am the Founder of NBJB",
+  email: "marlene@test.com",
+  password: "123456",
+  # language: 1,
+  # phone_number: "+4915750650469",
+)
+
+User.create!(
+  # username: "Florence",
+  # bio: "Hello, I'm Florence and this is my amazing Bio",
+  email: "florence@test.com",
+  password: "123456",
+  # language: 1,
+  # phone_number: "+14154259973",
+)
+
+puts "🎱🎱🎱🎱🎱 Amazing! We are done 🎱🎱🎱🎱🎱"
