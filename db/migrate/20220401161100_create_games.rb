@@ -1,7 +1,8 @@
 class CreateGames < ActiveRecord::Migration[6.1]
   def change
     create_table :games do |t|
-      t.interval :duration
+      t.datetime :start_time
+      t.datetime :end_time
       t.string :winner
       t.string :looser
       t.references :user, null: false, foreign_key: true

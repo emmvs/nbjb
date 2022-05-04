@@ -59,8 +59,8 @@ Place.create!(
 )
 
 Night.create!(
-  date: 0o4 / 0o5 / 2022,
-  time: '20:30:00-21:00:00',
+  start_time: Time.new(2022, 5, 4, 15, 0, 0, '+02:00'),
+  end_time: Time.new(2022, 5, 4, 15, 30, 0, '+02:00'),
   user: User.first,
   place: Place.first
 )
