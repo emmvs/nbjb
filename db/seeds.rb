@@ -12,6 +12,7 @@ puts "Cleaning Database! 🧹"
 User.destroy_all
 Night.destroy_all
 Place.destroy_all
+BitchBookEntry.destroy_all
 
 puts "Database is clean! 🧼"
 
@@ -63,6 +64,18 @@ Night.create!(
   end_time: Time.new(2022, 5, 4, 15, 30, 0, '+02:00'),
   user: User.first,
   place: Place.first
+)
+
+BitchBookEntry.create!(
+  topic: "History",
+  title: "When was Billard invented?",
+  text: "Did you know that... by 1850, the billiard table had essentially
+        evolved into its current form. The dominant billiard
+        game in Britain from about 1770 until the 1920's was
+        English Billiards, played with three balls and six
+        pockets on a large rectangular table.",
+  raiting: 8,
+  user: User.first
 )
 
 puts "🎱🎱🎱🎱🎱 Amazing! We are done 🎱🎱🎱🎱🎱"
