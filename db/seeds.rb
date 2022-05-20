@@ -17,7 +17,8 @@ BitchBookEntry.destroy_all
 puts "Database is clean! 🧼"
 
 User.create!(
-  # username: "Emma",
+  first_name: "Emma Anna Agneta",
+  last_name: "Rünzel",
   # birthday
   # first_game
   # astro_sign
@@ -31,7 +32,7 @@ User.create!(
 )
 
 User.create!(
-  # username: "Marlene",
+  first_name: "Marlene",
   # bio: "Hello, I'm Marlene and I am the Founder of NBJB",
   email: "marlene@test.com",
   password: "123456",
@@ -40,7 +41,7 @@ User.create!(
 )
 
 User.create!(
-  # username: "Florence",
+  first_name: "Florence",
   # bio: "Hello, I'm Florence and this is my amazing Bio",
   email: "florence@test.com",
   password: "123456",
