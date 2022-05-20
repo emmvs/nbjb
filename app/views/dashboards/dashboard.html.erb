@@ -1,11 +1,13 @@
+<h1>Dashboards#dashboard</h1>
+<p>Find me in app/views/dashboards/dashboard.html.erb</p>
 <!-- app/views/dashboards/overview.html.erb -->
 
 <h1>Dashboard</h1>
 <section class="container-dashboard">
-  <h1 class="font-alpha dashboard__title ">Hi, Player!</h1>
+  <h1 class="font-alpha dashboard__title ">Hi, <%= current_user.email %>!</h1>
   <div class="sign-card--dashboard">
     <div class="tag2 tag--video">
-      <h2 class="dashboard__video font-gamma">Your lastest Game</h2>
+      <h2 class="dashboard__video font-gamma">Your Dashboard</h2>
       <%# <% if current_user.signs != [] && current_user.signs.last.video.attached? %>
           <%# <p class="sign-name font-zeta"><%= current_user.signs.last.title %></p>
         <%# <div class="video-sign-container"> %>
