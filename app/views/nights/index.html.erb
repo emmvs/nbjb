@@ -1,2 +1,24 @@
 <%#app/views/nights/index.html.erb%>
 <h1>Night Index</h1>
+
+<%# ************** Navbar ************** %>
+<%= render 'shared/navbar'%>
+<p>
+  <span id="banner-typed-text"></span>
+</p>
+<div class="banner">
+  <h1 class="h1"><span class="title-1">No</span><span class="title-2">Balls</span><span class="title-3">Just</span><span class="title-4">Bitches</span></h1>
+    <h2 class="h2">🎱🎱🎱 Here are your last nights 🎱🎱🎱</h2>
+</div>
+
+<%# ************** Display Places of Nights ************** %>
+  <div class="container">
+      <% @nights.each do |night| %>
+      <div>
+        <%# <% raise %> 
+        <div class="list-name"><%= night.place.name %></div>
+        <div class="item-btn"><%= link_to 'Show Night', night_path(night) %></div>
+      </div>
+      <% end %>
+  </div>
+    <div class="item-btn"><%= link_to 'Add new night', new_night_path(@night) %></div>
