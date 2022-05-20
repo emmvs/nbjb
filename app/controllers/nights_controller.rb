@@ -1,12 +1,11 @@
 # app/controllers/nights_controller.rb
-
 class NightsController < ApplicationController
-  before_action :set_night, only: [:show, :edit, :update, :destroy]
+  before_action :set_night, only: %i[show edit update destroy]
 
   def index
     if params[:query].present?
       @query = params[:query]
-      @nights = Night.where("name ILIKE ?","%#{params[:query]}%")
+      @nights = Night.where("name ILIKE ?", "%#{params[:query]}%")
       # Preventing SQL Injection and Database error for
       # unknown characters
     else

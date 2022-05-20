@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :show ]
-  before_action :policy_scope_games, only: [ :index, :show, :new, :edit, :update, :destroy ]
-  before_action :find_game, only: [ :show, :edit, :update, :destroy ]
+  skip_before_action :authenticate_user!, only: %i[index show]
+  before_action :policy_scope_games, only: %i[index show new edit update destroy]
+  before_action :find_game, only: %i[show edit update destroy]
 
   def index
     if params[:query].present?
