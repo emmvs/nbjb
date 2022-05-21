@@ -10,3 +10,22 @@
 .navbar .navbar-brand img {
   width: 40px;
 }
+
+.btn-navbar {
+  text-decoration: none !important;
+  border-radius: 2rem;
+  border: none;
+  margin: 1rem;
+  padding: .6rem 1rem !important;
+  font-family: $secondary-font;
+  font-size: $font-size-16;
+  font-weight: $font-weigh--normal;
+  color: $font-color;
+  line-height: 1.1;
+
+  &:hover {
+    color: $font-color;
+    // box-shadow: inset 4px 4px 20px #C2C2BD,
+    //             inset -4px -4px 20px #C2C2BD;
+  }
+}

@@ -1,9 +1,12 @@
 <%# app/views/shared/_navbarhtml.erb %>
+
+<%# ************** Navbar Logo ************** %>
 <div class="navbar navbar-expand-sm navbar-light navbar fixed-top sticky">
   <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag "no-balls.png" %>
   <% end %>
 
+<%# ************** Navbar ************** %>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -12,16 +15,19 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="<%= active?(root_path)%>">
-          <%= link_to "Home", root_path, class: "btn-link"  %>
+          <%= link_to "Home", root_path, class: "btn-navbar"  %>
         </li>
         <li class="<%= active?(dashboards_dashboard_path)%>">
-        <%= link_to "Dashboard", dashboards_dashboard_path, class: "btn-link"  %>
+        <%= link_to "Dashboard", dashboards_dashboard_path, class: "btn-navbar"  %>
         </li>
         <li class="<%= active?(nights_path)%>">
-         <%= link_to "Nights", nights_path, class: "btn-link"  %>
+         <%= link_to "Nights", nights_path, class: "btn-navbar"  %>
         </li>
         <li class="<%= active?(places_path)%>">
-        <%= link_to "Places", places_path, class: "btn-link"  %>
+        <%= link_to "Places", places_path, class: "btn-navbar"  %>
+        </li>
+        <li class="<%= active?(root_path)%>">
+          <%= link_to "BitchBook", bitch_book_entries_path, class: "btn-navbar"  %>
         </li>
 
 <%# ************** Navbar Dropdown ************** %>

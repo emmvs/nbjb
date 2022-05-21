@@ -10,3 +10,108 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+// ********* No Balls - Just Bitches *********
+// ********* Design & Font Classes *********
+
+body {
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #181316 0%, #006600 74%);
+  background-size: cover;
+}
+
+.font-alpha {
+  position: relative;
+  font-family: $primary-font;
+  font-size: $font-size-64;
+  font-weight: $font-weigh--extra;
+  text-align: center;
+  // text-transform: uppercase;
+  color: $font-color;
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+  z-index: 2;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: .6em;
+    right: 0;
+    bottom: 0;
+    background: $primary-color;
+    z-index: -1;
+  }
+}
+
+.font-beta {
+  position: relative;
+  font-family: $primary-font;
+  font-size: $font-size-48;
+  font-weight: $font-weigh--extra;
+  text-transform: uppercase;
+  color: $font-color;
+  margin-top: .5rem;
+  margin-bottom: 1.2rem;
+  width: fit-content;
+  z-index: 2;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 2em;
+    height: .6em;
+    right: 0;
+    bottom: 0;
+    background: $secondary-color--dark;
+    z-index: -1;
+  }
+}
+
+.font-delta {
+  position: relative;
+  font-family: $primary-font;
+  font-size: $font-size-36;
+  font-weight: $font-weigh--bold;
+  color: $font-color;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  width: fit-content;
+  z-index: 2;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 2em;
+    height: .6em;
+    right: 0;
+    bottom: 0;
+    background: $sub-color;
+    z-index: -1;
+  }
+}
+
+.font-gamma {
+  font-family: $primary-font;
+  font-size: $font-size-24;
+  font-weight: $font-weigh--bold;
+  color: $font-color;
+  margin-top: .5rem;
+  margin-bottom: .7rem;
+  position: relative;
+  width: fit-content;
+  z-index: 2;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 2em;
+    height: .6em;
+    right: 0;
+    bottom: 0;
+    background: $secondary-color;
+    z-index: -1;
+  }
+}

@@ -1,5 +1,6 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500|Raleway:700,900");
 
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
@@ -14,3 +15,19 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+// ********* No Balls - Just Bitches *********
+// ********* Fonts *********
+
+$primary-font: "Amatic SC"; // 300, 400
+$secondary-font: "Amatic SC"; // 300, 400, 600
+$font-weigh--light: 400;
+$font-weigh--normal: 500;
+$font-weigh--bold: 700;
+$font-weigh--extra: 900;
+$font-size-16: 16px; //M
+$font-size-24: 24px; //L
+$font-size-36: 36px; //XL
+$font-size-48: 48px; //XXL
+$font-size-64: 64px; //XXL
+$font-color: #181316;
