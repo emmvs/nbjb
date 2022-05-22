@@ -22,11 +22,10 @@ class BitchBookEntriesController < ApplicationController
   # POST /bitch_book_entries or /bitch_book_entries.json
   def create
     @bitch_book_entry = BitchBookEntry.new(bitch_book_entry_params)
-
     respond_to do |format|
       if @bitch_book_entry.save
         format.html do
-          redirect_to bitch_book_entry_url(@bitch_book_entry), notice: "Bitch book entry was successfully created."
+          redirect_to bitch_book_entry_url(@bitch_book_entry), notice: "Bitch book entry was successfully created! 🎉"
         end
         format.json { render :show, status: :created, location: @bitch_book_entry }
       else
@@ -54,7 +53,6 @@ class BitchBookEntriesController < ApplicationController
   # DELETE /bitch_book_entries/1 or /bitch_book_entries/1.json
   def destroy
     @bitch_book_entry.destroy
-
     respond_to do |format|
       format.html { redirect_to bitch_book_entries_url, notice: "Bitch book entry was successfully destroyed." }
       format.json { head :no_content }
@@ -70,6 +68,7 @@ class BitchBookEntriesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def bitch_book_entry_params
+    raise
     params.require(:bitch_book_entry).permit(:topic, :title, :text, :rating, :user)
   end
 end
