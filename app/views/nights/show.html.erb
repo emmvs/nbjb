@@ -1,2 +1,9 @@
 <%#app/views/nights/show.html.erb%>
-<h1>Night Show</h1>
+<br>
+<br>
+<br>
+<h1 class="font-alpha">Your latest night was at:</h1>
+  <div>
+    <div class="font-beta"><%= @night.place.name %></div>
+    <div class="font-gamma"><%= link_to 'Show Nights', nights_path(@night) %></div>
+  </div>
