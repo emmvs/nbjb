@@ -9,8 +9,8 @@ require "open-uri"
 
 puts "Cleaning Database! 🧹"
 
-User.destroy_all
 Night.destroy_all
+User.destroy_all
 Place.destroy_all
 BitchBookEntry.destroy_all
 

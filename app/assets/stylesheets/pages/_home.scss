@@ -4,6 +4,15 @@
   display: flex;
 }
 
+.banner-home {
+  padding: 60px;
+  width: 100rem;
+  text-align: center;
+  background: $green;
+  color: white;
+  font-size: 30px;
+}
+
 h1 {
  margin: 15px;
 }
