@@ -17,36 +17,54 @@ BitchBookEntry.destroy_all
 puts "Database is clean! 🧼"
 
 User.create!(
-  first_name: "Emma Anna Agneta",
-  last_name: "Rünzel",
-  # birthday
-  # first_game
-  # astro_sign
-  # favorite_drink
-  # lucky_number
-  # bio: "Hello, I'm Emma and I am the Founder of NBJB",
   email: "emma@test.com",
   password: "123456",
   # language: 1,
-  # phone_number: "+4915785519243"
+  first_name: "Emma Anna Agneta",
+  last_name: "Rünzel",
+  # phone_number: "+4915750650469",
+  # birthday: 1997/09/15/12/00/00,
+  # first_game: 20200726120000,
+  sign: "Virgo ♍️",
+  favorite_drink: "Espresso Martini",
+  lucky_number: 2,
+  bio: "Hello, I'm Emma and I am the Founder of NBJB",
+  wins: 6,
+  losses: 4
 )
 
 User.create!(
-  first_name: "Marlene",
-  # bio: "Hello, I'm Marlene and I am the Founder of NBJB",
   email: "marlene@test.com",
   password: "123456",
   # language: 1,
-  # phone_number: "+4915750650469"
+  first_name: "Marlene",
+  last_name: "von Kujawa",
+  # phone_number: "+4915750650469",
+  # birthday: 19970601120000,
+  # first_game: 20200726120000,
+  sign: "Gemini ♊️",
+  favorite_drink: "Espresso Martini",
+  lucky_number: 6,
+  bio: "Hello, I'm Marlene and I am the Founder of NBJB",
+  wins: 6,
+  losses: 4
 )
 
 User.create!(
-  first_name: "Florence",
-  # bio: "Hello, I'm Florence and this is my amazing Bio",
   email: "florence@test.com",
   password: "123456",
-  # language: 1,
-  # phone_number: "+14154259973"
+  # language: 2,
+  first_name: "Florence",
+  last_name: "Böhm",
+  # phone_number: "+14154259973",
+  # birthday: 19990507120000,
+  # first_game: 20210507120000,
+  sign: "Taurus ♉️",
+  favorite_drink: "Espresso Martini",
+  lucky_number: 7,
+  bio: "Hello, I'm Florence and this is my amazing Bio",
+  wins: 6,
+  losses: 4
 )
 
 Place.create!(

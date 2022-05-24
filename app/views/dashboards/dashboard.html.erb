@@ -3,10 +3,13 @@
 <br>
 <br>
 <section class="container">
-  <div>
+  <div class="item-hello">
     <h1 class="font-alpha">Hi, <%= current_user.first_name %>!</h1>
   </div>
   <div>
-    <h2 class="font-gamma">and welcome to your Dashboard</h2>
+    <h2 class="item-welcome font-gamma">and welcome to your Dashboard</h2>
+  </div>
+  <div class="item-lucky_number">
+  <h3> Your lucky number is:<%= current_user.lucky_number %> </h3>
   </div>
 </section>
