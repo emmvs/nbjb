@@ -5,7 +5,7 @@
   <div class="container">
       <% @nights.each do |night| %>
       <div>
-        <div class="list-name font-gamma"><%= night.place.name %></div>
+        <div class="list-name font-gamma"><%= night.last.title %></div>
         <div class="item-btn font-gamma"><%= link_to 'Show Night', night_path(night) %></div>
       </div>
       <% end %>

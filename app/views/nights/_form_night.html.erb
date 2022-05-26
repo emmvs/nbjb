@@ -1,12 +1,14 @@
-<div class="container py-5 form-adjust form-night">
+<%# app/views/nights/_form.html.erb %>
+<div class="container py-5 form-adjust">
   <div class="row form-bg">
     <div class="col-12 col-md-6 offset-lg-3">
-      <div class="bg-white rounded p-4 shadow">
-        <h3 class="font-delta">Tell us about your Night</h3>
+      <div class="bg-white rounded p-4 shadow form-night">
+        <h3 class="font-delta">Plan your Night</h3>
         <%= simple_form_for(@night) do |f| %>
-          <%= f.input :start_time, placeholder: 'When did you night start?🚀' %>
-          <%= f.input :end_time, placeholder: 'When did you night end?😴' %>
-          <label for="purpose">Your camel's purpose:&nbsp;&nbsp;&nbsp;</label>
+          <%= f.input :title, placeholder: 'Whats the name of your night?🎉' %>
+          <%= f.input :start_time, placeholder: 'When did your night start?🚀' %>
+          <%= f.input :end_time, placeholder: 'When did your night end?😴' %>
+          <%# <label for="purpose">Your camel's purpose:&nbsp;&nbsp;&nbsp;</label> %>
           <%# <%= f.select :purpose, ["Movie Production", "Desert Trip", "Race", "Photoshoot", "Birthday Party", "Fair", "Present", "Wedding"] %>
           <%# <%= f.input :description, placeholder: 'Let us know more about your beloved camel' %>
           <%# <%= f.input :photo, label: "Choose the sassy picture for your camel"  %>

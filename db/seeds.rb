@@ -79,6 +79,7 @@ Place.create!(
 )
 
 Night.create!(
+  title: "Emmas Amazing Night out on May 26th 2022",
   start_time: Time.new(2022, 5, 4, 15, 0, 0, '+02:00'),
   end_time: Time.new(2022, 5, 4, 15, 30, 0, '+02:00'),
   user: User.first,
