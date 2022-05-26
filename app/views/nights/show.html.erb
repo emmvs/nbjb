@@ -1,9 +1,14 @@
 <%#app/views/nights/show.html.erb%>
-<br>
-<br>
-<br>
-<h1 class="font-alpha">Your latest night was at:</h1>
+
+<%# ************** Display Specific Night ************** %>
+<h1 class="font-alpha">Your latest night was:</h1>
   <div>
-    <div class="font-beta"><%= @night.title %></div>
-    <div class="font-gamma"><%= link_to 'Show Nights', nights_path(@night) %></div>
+    <div class="container-nights">
+      <div>
+        <div class="list-name font-gamma"><%= @night.title %></div>
+        <div class="list-name font-gamma"><%= @night.place %></div>
+        <div class="list-name font-gamma"><%= @night.start_time %></div>
+        <div class="list-name font-gamma"><%= @night.end_time %></div>
+        <div class="item-btn font-gamma"><%= link_to 'All Nights', nights_path(@night) %></div>
+      </div>
   </div>

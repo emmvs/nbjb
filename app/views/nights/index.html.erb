@@ -1,13 +1,13 @@
 <%#app/views/nights/index.html.erb%>
 <h1 class="font-beta">Nights</h1>
 
-<%# ************** Display Places of Nights ************** %>
+<%# ************** Display Nights ************** %>
   <div class="container">
       <% @nights.each do |night| %>
       <div>
-        <div class="list-name font-gamma"><%= night.last.title %></div>
+        <div class="list-name font-gamma"><%= night.title %></div>
         <div class="item-btn font-gamma"><%= link_to 'Show Night', night_path(night) %></div>
+        <div class="item-btn font-gamma"><%= link_to 'Add new night', new_night_path(@night) %></div>
       </div>
       <% end %>
   </div>
-    <div class="item-btn"><%= link_to 'Add new night', new_night_path(@night) %></div>
