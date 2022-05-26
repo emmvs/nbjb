@@ -14,23 +14,23 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="<%= active?(root_path)%>">
-          <%= link_to "Home", root_path, class: "btn-navbar"  %>
+        <li class="font-gamma<%= active?(root_path)%>">
+          <%= link_to "HOME", root_path, class: "btn-navbar"  %>
         </li>
-        <li class="<%= active?(dashboards_dashboard_path)%>">
-        <%= link_to "Dashboard", dashboards_dashboard_path, class: "btn-navbar"  %>
+        <li class="font-gamma<%= active?(dashboards_dashboard_path)%>">
+        <%= link_to "DASHBOARD", dashboards_dashboard_path, class: "btn-navbar"  %>
         </li>
-        <li class="<%= active?(nights_path)%>">
-         <%= link_to "Nights", nights_path, class: "btn-navbar"  %>
+        <li class="font-gamma<%= active?(nights_path)%>">
+         <%= link_to "NIGHTS", nights_path, class: "btn-navbar"  %>
         </li>
-        <li class="<%= active?(users_path)%>">
-         <%= link_to "Bitches", users_path, class: "btn-navbar"  %>
+        <li class="font-gamma<%= active?(users_path)%>">
+         <%= link_to "BITCHES", users_path, class: "btn-navbar"  %>
         </li>
-        <li class="<%= active?(places_path)%>">
-        <%= link_to "Places", places_path, class: "btn-navbar"  %>
+        <li class="font-gamma<%= active?(places_path)%>">
+        <%= link_to "PLACES", places_path, class: "btn-navbar"  %>
         </li>
-        <li class="<%= active?(root_path)%>">
-          <%= link_to "BitchBook", bitch_book_entries_path, class: "btn-navbar"  %>
+        <li class="font-gamma<%= active?(root_path)%>">
+          <%= link_to "BITCHBOOK", bitch_book_entries_path, class: "btn-navbar"  %>
         </li>
 
 <%# ************** Navbar Dropdown ************** %>
@@ -38,8 +38,10 @@
         <li class="nav-item dropdown">
           <%= image_tag "https://www.clipartmax.com/png/middle/82-823494_billiard-ball-clipart-9-ball-pool-ball-9-png.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <%= link_to "All Nights", nights_path, class: "dropdown-item" %>
             <%= link_to "Plan Night", new_night_path, class: "dropdown-item" %>
+            <%= link_to "All Nights", nights_path, class: "dropdown-item" %>
+            <%= link_to "Places", places_path, class: "dropdown-item" %>
+            <%= link_to "Bitches", users_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
