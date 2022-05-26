@@ -22,41 +22,23 @@ class BitchBookEntriesController < ApplicationController
   # POST /bitch_book_entries or /bitch_book_entries.json
   def create
     @bitch_book_entry = BitchBookEntry.new(bitch_book_entry_params)
-    respond_to do |format|
-      if @bitch_book_entry.save
-        format.html do
-          redirect_to bitch_book_entry_url(@bitch_book_entry), notice: "Bitch book entry was successfully created! 🎉"
-        end
-        format.json { render :show, status: :created, location: @bitch_book_entry }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @bitch_book_entry.errors, status: :unprocessable_entity }
-      end
+    if @bitch_book_entry.save
+      redirect_to bitch_book_entries_path
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /bitch_book_entries/1 or /bitch_book_entries/1.json
   def update
-    respond_to do |format|
-      if @bitch_book_entry.update(bitch_book_entry_params)
-        format.html do
-          redirect_to bitch_book_entry_url(@bitch_book_entry), notice: "Bitch book entry was successfully updated."
-        end
-        format.json { render :show, status: :ok, location: @bitch_book_entry }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @bitch_book_entry.errors, status: :unprocessable_entity }
-      end
-    end
+    @bitch_book_entry.update(bitch_book_entry_params)
+    redirect_to bitch_book_entry_path(@bitch_book_entry)
   end
 
   # DELETE /bitch_book_entries/1 or /bitch_book_entries/1.json
   def destroy
     @bitch_book_entry.destroy
-    respond_to do |format|
-      format.html { redirect_to bitch_book_entries_url, notice: "Bitch book entry was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    redirect_to bitch_book_entries_path
   end
 
   private
@@ -68,7 +50,12 @@ class BitchBookEntriesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def bitch_book_entry_params
-    raise
-    params.require(:bitch_book_entry).permit(:topic, :title, :text, :rating, :user)
+    params.require(:bitch_book_entry).permit(
+      :topic,
+      :title,
+      :text,
+      :rating,
+      :user
+    )
   end
 end
