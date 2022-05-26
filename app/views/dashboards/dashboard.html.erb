@@ -1,53 +1,84 @@
 <!-- app/views/dashboards/overview.html.erb -->
+
 <%# TO DO %>
 <%# Make The Dashboard editable/aarangeable %>
 <br>
 <br>
 <br>
-<section class="container">
-  <ul id="sortable">
-    <li class="ui-state-default">
-    <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-      <div class="item-hello">
-        <h1 class="font-beta">Hi, <%= current_user.first_name %>!</h1>
-        <h2 class="item-welcome font-gamma">and welcome to your personal Dashboard</h2>
+<section class="container-dashboard">
+
+  <div class="item-hello">
+    <h2 class="font-beta">Hi, <%= current_user.first_name %>!</h2>
+    <h2 class="item-welcome font-gamma">and welcome to your personal Dashboard</h2>
+  </div>
+    <br>
+
+<!-- Content Row -->
+  <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4 item-bio">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+              <div class="col mr-2"></div>
+                <h3 class="font-gamma"> Bio: <%= current_user.bio %> </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      <br>
+        <div class="col-xl-3 col-md-6 mb-4 item-lucky-number">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+              <div class="col mr-2"></div>
+                <h3 class="mb-1 text-xs font-gamma"> Your lucky number is: <%= current_user.lucky_number %></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      <br>
+        <div class="col-xl-3 col-md-6 mb-4 item-favorite-drink">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+              <div class="col mr-2"></div>
+                <h3 class="font-gamma"> Your favorite drink is: <%= current_user.favorite_drink %></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      <br>
+        <div class="col-xl-3 col-md-6 mb-4 item-sign">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+              <div class="col mr-2"></div>
+                <h3 class="font-gamma"> Your sign is: <%= current_user.sign %></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      <br>
+        <div class="col-xl-3 col-md-6 mb-4 item-wins">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+              <div class="col mr-2"></div>
+                <h3 class="font-gamma"> You won : <%= current_user.wins %> times!</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      <br>
+        <div class="col-xl-3 col-md-6 mb-4 item-losses">
+          <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+              <div class="col mr-2"></div>
+                <h3 class="font-gamma"> you lost : <%= current_user.losses %> times! 🎱 </h3>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </li>
-    <li class="ui-state-default">
-    <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-      <div>
-        <h3 class="font-gamma"> Your lucky number is: <%= current_user.lucky_number %> </h3>
-      </div>
-    </li>
-    <li class="ui-state-default">
-    <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-      <div>
-        <h3 class="font-gamma"> Your favorite drink is: <%= current_user.favorite_drink %> </h3>
-      </div>
-    </li>
-    <li class="ui-state-default">
-    <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-      <div>
-        <h3 class="font-gamma"> Your sign is: <%= current_user.sign %> </h3>
-      </div>
-    </li>
-    <li class="ui-state-default">
-    <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-      <div>
-        <h3 class="font-gamma"> Bio: <%= current_user.bio %> </h3>
-      </div>
-    </li>
-    <li class="ui-state-default">
-    <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-      <div>
-        <h3 class="font-gamma"> You won : <%= current_user.wins %> times! </h3>
-      </div>
-    </li>
-    <li class="ui-state-default">
-    <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-      <div>
-        <h3 class="font-gamma"> you lost : <%= current_user.losses %> times! 🎱 </h3>
-      </div>
-    </li>
-  </ul>
 </section>
