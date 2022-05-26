@@ -68,6 +68,17 @@ User.create!(
 )
 
 Place.create!(
+  name: "Bierbaum 3",
+  address: "Neukölln",
+  asshole_score: 2,
+  barkeeper_rating: 8,
+  dating_rating: 1,
+  bathroom_rating: 4,
+  beer_price: 3,
+  user: User.first
+)
+
+Place.create!(
   name: "Bechereck",
   address: "Neukölln",
   asshole_score: 4,
