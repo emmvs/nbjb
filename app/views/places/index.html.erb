@@ -3,19 +3,16 @@
 <%# List of Places different %>
 <h1 class="font-beta">Places</h1>
 
+<%# ************** Display Places ************** %>
+<h1 class="font-gamma">Here is a list of all Places we played at:</h1>
 <div class="container">
-  <h1 class="font-gamma">Here is a list of all places we played at:</h1>
-  <br>
-  <tbody>
     <% @places.each do |place| %>
-    <div>
-      <div class="list-name font-gamma"><%= Place.last.name %></div>
+    <div class="card border-left-primary shadow h-100 py-2">
+      <div class="list-name"><%= place.name %></div>
+      <div class="item-btn"><%= link_to 'Show Place', place_path(place) %></div>
+      <div class="item-btn"><%= link_to 'Add new Place', new_place_path(@place) %></div>
+      <div><%= link_to 'Edit', edit_place_path(place) %></div>
+      <div><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></div>
     </div>
-      <tr>
-        <td><%= link_to 'Show', place %></td>
-        <td><%= link_to 'Edit', edit_place_path(place) %></td>
-        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
     <% end %>
-  </tbody>
 </div>
