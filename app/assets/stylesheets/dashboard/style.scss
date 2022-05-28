@@ -1,5 +1,17 @@
 // app/assets/stylesheets/dashboard/style.scss
 
+// DASHBOARD CONTAINER
+
+.container-dashboard {
+  margin: 20%;
+}
+
+// DASHBOARD CARDS
+
+.card-dashboard {}
+
+// SORTABLE CARDS
+
 #results li {
   cursor: grab;
 }

@@ -6,12 +6,16 @@
 <div class="container">
   <h1 class="font-gamma">Here is a list of all places we played at:</h1>
   <br>
-  <ol>
+  <tbody>
+    <% @places.each do |place| %>
     <div>
-      <p class="font-gamma">Name: <%= Place.last.name %> </p>
+      <div class="list-name font-gamma"><%= Place.last.name %></div>
     </div>
-    <div>
-      <p class="font-gamma">Address: <%= Place.last.address %> </p>
-    </div>
-  </ol>
+      <tr>
+        <td><%= link_to 'Show', place %></td>
+        <td><%= link_to 'Edit', edit_place_path(place) %></td>
+        <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </div>
