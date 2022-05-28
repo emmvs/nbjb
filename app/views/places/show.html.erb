@@ -1,24 +1,25 @@
 <%# app/views/places/show.html.erb %>
-  <ol>
-    <div>
-      <p class="font-gamma">Name: <%= Place.last.name %> </p>
+
+<%# ************** Display Specific Place ************** %>
+<h1 class="font-alpha">Your latest Place was:</h1>
+  <div>
+    <div class="container-places">
+    <ol>
+      <div><p class="font-gamma">Name: <%= @place.name %> </p></div>
+      <div><p class="font-gamma">Address: <%= @place.address %> </p></div>
+      <div><p class="font-gamma">Barkeeper: <%= @place.barkeeper_rating %>/8
+      <div id="balls-rating">
+        <% if @place.no_of_balls.blank? %>
+          <%= link_to 'Please add a Rating 🎱',{ controller: 'places', action: 'new', id: product.id } %>
+        <% else %>
+          Ball rating: <%= render_balls(product.no_of_stars) %>
+        <% end %>
     </div>
-    <div>
-      <p class="font-gamma">Address: <%= Place.last.address %> </p>
-    </div>
-    <div>
-      <p class="font-gamma">Barkeeper: <%= Place.last.barkeeper_rating %>/8 🎱🎱🎱🎱🎱🎱🎱🎱 </p>
-    </div>
-    <div>
-      <p class="font-gamma">Average Beer Price: <%= Place.last.beer_price %>/8 🎱🎱🎱 </p>
-    </div>
-    <div>
-      <p class="font-gamma">Asshole Score: <%= Place.last.asshole_score %>/8 🎱🎱🎱🎱 </p>
-    </div>
-    <div>
-      <p class="font-gamma">Dating Rating: <%= Place.last.dating_rating %>/8 🎱🎱🎱 </p>
-    </div>
-    <div>
-      <p class="font-gamma">Bathroom Rating: <%= Place.last.bathroom_rating %>/8 🎱🎱🎱 </p>
-    </div>
-  </ol>
+       </p></div>
+      <div><p class="font-gamma">Average Beer Price: <%= @place.beer_price %>/8 🎱🎱🎱 </p></div>
+      <div><p class="font-gamma">Asshole Score: <%= @place.asshole_score %>/8 🎱🎱🎱🎱 </p></div>
+      <div><p class="font-gamma">Dating Rating: <%= @place.dating_rating %>/8 🎱🎱🎱 </p></div>
+      <div><p class="font-gamma">Bathroom Rating: <%= @place.bathroom_rating %>/8 🎱🎱🎱 </p></div>
+      <div class="item-btn btn font-gamma"><%= link_to 'All Places', places_path(@place) %></div>
+    </ol>
+  </div>
