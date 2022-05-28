@@ -1,9 +1,17 @@
 <%# app/views/places/index.html.erb %>
+<%# TO DO %>
+<%# List of Places different %>
 <h1 class="font-beta">Places</h1>
 
 <div class="container">
-<h1 class="font-gamma">Here is a list of all places we played at:</h1>
-<ol>
-  <%= @places.last.name %>
-</ol>
+  <h1 class="font-gamma">Here is a list of all places we played at:</h1>
+  <br>
+  <ol>
+    <div>
+      <p class="font-gamma">Name: <%= Place.last.name %> </p>
+    </div>
+    <div>
+      <p class="font-gamma">Address: <%= Place.last.address %> </p>
+    </div>
+  </ol>
 </div>
