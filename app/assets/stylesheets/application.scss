@@ -11,16 +11,24 @@
 @import "components/index";
 @import "pages/index";
 
+// USERS/BITCHES
+
+// DASHBOARD
+@import "dashboard/style.scss";
+
 // NIGHTS
 @import "nights/form_night";
 
 // PLACES
 
-// ********* No Balls - Just Bitches *********
+// BITCHBOOK
+@import "bitchbook/style.scss";
+
+// ********* NO BALLS - JUST BITCHES *********
 // ********* Design & Font Classes *********
 
 body {
-  background-color: #e8c3c8;
+  background-color: $white;
   // background-image: linear-gradient(315deg, #3b3b3b 0%, #76ca76 74%);
   background-size: cover;
 }

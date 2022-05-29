@@ -1,7 +1,7 @@
 <%# app/views/places/edit.html.erb %>
-<h1>Editing your Place</h1>
-
-<%= render 'form', place: @place %>
-
-<%= link_to 'Show', @place %> |
-<%= link_to 'Back', places_path %>
+<div class="container-places">
+  <h1>Editing your Place</h1>
+  <%= render 'form', place: @place %>
+  <%= link_to 'Show', @place %> |
+  <%= link_to 'Back', places_path %>
+</div>

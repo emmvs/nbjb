@@ -1,13 +1,15 @@
 <%# app/views/users/index.html.erb %>
-<h1 class="font-beta">Bitches</h1>
+<div class="container-users">
+  <h1 class="font-beta">Bitches</h1>
 
-<%# ************** Display Users/Bitches ************** %>
-  <div class="container">
-      <% @users.each do |user| %>
-      <div>
-        <div class="list-name font-gamma"><%= User.name %></div>
-        <div class="item-btn font-gamma"><%= link_to 'Show Bitches Profil', user_path(user) %></div>
-      </div>
-      <% end %>
-  </div>
-    <div class="item-btn"><%= link_to 'Add new User', new_user_path(@user) %></div>
+  <%# ************** Display Users/Bitches ************** %>
+    <div class="container">
+        <% @users.each do |user| %>
+        <div>
+          <div class="list-name font-gamma"><%= User.name %></div>
+          <div class="item-btn font-gamma"><%= link_to 'Show Bitches Profil', user_path(user) %></div>
+        </div>
+        <% end %>
+    </div>
+      <div class="item-btn"><%= link_to 'Add new User', new_user_path(@user) %></div>
+</div>

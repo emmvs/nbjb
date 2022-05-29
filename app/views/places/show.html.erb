@@ -1,17 +1,18 @@
 <%# app/views/places/show.html.erb %>
-
-<%# ************** Display Specific Place ************** %>
-<h1 class="font-alpha">Your latest Place was:</h1>
-  <div>
-    <div class="container-places">
-    <ol>
-      <div><p class="font-gamma">Name: <%= @place.name %> </p></div>
-      <div><p class="font-gamma">Address: <%= @place.address %> </p></div>
-      <div><p class="font-gamma">Barkeeper: <%= @place.barkeeper_rating %>/8 <% @place.barkeeper_rating.to_i.times do  %><span>🎱</span><% end %></p></div>
-      <div><p class="font-gamma">Average Beer Price: <%= @place.beer_price %>/8 <% @place.beer_price.to_i.times do  %><span>🎱</span><% end %></p></div>
-      <div><p class="font-gamma">Asshole Score: <%= @place.asshole_score %>/8 <% @place.asshole_score.to_i.times do  %><span>🎱</span><% end %></p></div>
-      <div><p class="font-gamma">Dating Rating: <%= @place.dating_rating %>/8 <% @place.dating_rating.to_i.times do  %><span>🎱</span><% end %></p></div>
-      <div><p class="font-gamma">Bathroom Rating: <%= @place.bathroom_rating %>/8 <% @place.bathroom_rating.to_i.times do  %><span>🎱</span><% end %></p></div>
-      <div class="item-btn btn font-gamma"><%= link_to 'All Places', places_path(@place) %></div>
-    </ol>
+<div class="container-places">
+  <%# ************** Display Specific Place ************** %>
+  <h1 class="font-alpha">Your latest Place was:</h1>
+    <div>
+      <div class="container-places">
+      <ol>
+        <div><p class="font-gamma">Name: <%= @place.name %> </p></div>
+        <div><p class="font-gamma">Address: <%= @place.address %> </p></div>
+        <div><p class="font-gamma">Barkeeper: <%= @place.barkeeper_rating %>/8 <% @place.barkeeper_rating.to_i.times do  %><span>🎱</span><% end %></p></div><% @place.blank_balls.times do %><span class="glyphicon glyphicon-star-empty"></span><% end %>
+        <div><p class="font-gamma">Average Beer Price: <%= @place.beer_price  %><% @place.beer_price.to_i.times do  %><span>🎱</span><% end %></p></div>
+        <div><p class="font-gamma">Asshole Score: <%= @place.asshole_score %>/8 <% @place.asshole_score.to_i.times do  %><span>🎱</span><% end %></p></div>
+        <div><p class="font-gamma">Dating Rating: <%= @place.dating_rating %>/8 <% @place.dating_rating.to_i.times do  %><span>🎱</span><% end %></p></div>
+        <div><p class="font-gamma">Bathroom Rating: <%= @place.bathroom_rating %>/8 <% @place.bathroom_rating.to_i.times do  %><span>🎱</span><% end %></p></div>
+        <div class="item-btn btn font-gamma"><%= link_to 'All Places', places_path(@place) %></div>
+      </ol>
+    </div>
   </div>
