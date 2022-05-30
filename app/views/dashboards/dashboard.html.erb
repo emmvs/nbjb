@@ -16,7 +16,7 @@
   <div class="row">
         <div class="col-xl-2 col-md-4 mb-4 item-bio">
           <div class="card dashboard-card border-left-primary shadow h-100 py-2">
-            <div class="card-body results">
+            <div id="results" class="card-body">
               <div class="row no-gutters align-items-center">
               <div class="col mr-2"></div>
                 <h3 class="font-gamma"><%= current_user.bio %> </h3>
@@ -27,7 +27,7 @@
       <br>
         <div class="col-xl-2 col-md-4 mb-4 item-lucky-number">
           <div class="card card-dashboard border-left-primary shadow h-100 py-2">
-            <div class="card-body results">
+            <div id="results" class="card-body results">
               <div class="row no-gutters align-items-center">
               <div class="col mr-2"></div>
                 <h3 class="mb-1 text-xs font-gamma"> Your lucky number is: <%= current_user.lucky_number %></h3>
@@ -38,7 +38,7 @@
       <br>
         <div class="col-xl-2 col-md-4 mb-4 item-favorite-drink">
           <div class="card card-dashboard border-left-primary shadow h-100 py-2">
-            <div class="card-body">
+            <div id="results" class="card-body">
               <div class="row no-gutters align-items-center">
               <div class="col mr-2"></div>
                 <h3 class="font-gamma"> Your favorite drink is: <%= current_user.favorite_drink %></h3>
@@ -49,7 +49,7 @@
       <br>
         <div class="col-xl-2 col-md-4 mb-4 item-sign">
           <div class="card card-dashboard border-left-primary shadow h-100 py-2">
-            <div class="card-body">
+            <div id="results" class="card-body">
               <div class="row no-gutters align-items-center">
               <div class="col mr-2"></div>
                 <h3 class="font-gamma"> Your sign is: <%= current_user.sign %></h3>
@@ -61,7 +61,7 @@
       <br>
         <div class="col-xl-2 col-md-4 mb-4 item-wins">
           <div class="card card-dashboard border-left-primary shadow h-100 py-2">
-            <div class="card-body">
+            <div id="results" class="card-body">
               <div class="row no-gutters align-items-center">
               <div class="col mr-2"></div>
                 <h3 class="font-gamma"> You won : <%= current_user.wins %> times!</h3>
@@ -73,7 +73,7 @@
       <br>
         <div class="col-xl-2 col-md-4 mb-4 item-losses">
           <div class="card card-dashboard border-left-primary shadow h-100 py-2">
-            <div class="card-body">
+            <div id="results" class="card-body">
               <div class="row no-gutters align-items-center">
               <div class="col mr-2"></div>
                 <h3 class="font-gamma"> You lost : <%= current_user.losses %> times! 🎱 </h3>
