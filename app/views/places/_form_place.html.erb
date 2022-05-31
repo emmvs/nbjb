@@ -1,0 +1,25 @@
+<%# app/views/places/_form_place.html.erb %>
+<div class="container py-5 form-adjust">
+  <div class="row form-bg">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-4 shadow form-place">
+        <h3 class="font-delta">Plan your Night</h3>
+        <%= simple_form_for(@place) do |f| %>
+          <%= f.input :name, placeholder: 'Whats the name of your place?🎉' %>
+          <%= f.input :address, placeholder: 'What address is your place at?🎱' %>
+          <%= f.input :asshole_score, placeholder: 'Are there many assholes here?🚀' %>
+          <%= f.input :barkeeper_rating, placeholder: 'What are the bakeepers like?' %>
+          <%= f.input :dating_rating, placeholder: 'Any dateable peeps around?' %>
+          <%= f.input :bathroom_rating, placeholder: 'Whats the bathroom like?🚽' %>
+          <%= f.input :beer_price, placeholder: 'How expensive are the beers?🍺' %>
+          <% if f.object.new_record? %>
+            <%= f.submit "Create Place", class: "btn btn-secondary" %>
+          <% else %>
+            <%= f.submit "Edit Place", class: "btn btn-secondary" %>
+          <% end %>
+          <%= link_to "Cancel", :back, {:class=>"form--link"} %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

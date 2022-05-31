@@ -1,7 +1,5 @@
 <%# app/views/places/index.html.erb %>
 <div class="container-places">
-  <%# TO DO %>
-  <%# List of Places different %>
   <h1 class="font-beta">Places</h1>
 
   <%# ************** Display Places ************** %>
@@ -11,10 +9,11 @@
       <div class="card border-left-primary shadow h-100 py-2">
         <div class="list-name"><%= place.name %></div>
         <div class="item-btn"><%= link_to 'Show Place', place_path(place) %></div>
-        <div class="item-btn"><%= link_to 'Add new Place', new_place_path(@place) %></div>
         <div><%= link_to 'Edit', edit_place_path(place) %></div>
         <div><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></div>
       </div>
       <% end %>
   </div>
+  <%# ************** Add a new Place ************** %>
+  <div class="item-btn"><%= link_to 'Add new Place', new_place_path(@place) %></div>
 </div>
