@@ -14,3 +14,10 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
+
+// Sortable
+import { initSortable } from "../components/init_sortable"
+
+document.addEventListener('tubolinks:load', () => {
+  initSortable();
+});

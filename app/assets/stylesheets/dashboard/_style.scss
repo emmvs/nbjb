@@ -1,20 +1,17 @@
 // app/assets/stylesheets/dashboard/style.scss
 
 // DASHBOARD CONTAINER
-
 .container-dashboard {
   background-color: $white;
-  margin: 20px;
+  margin: 40px;
 }
 
-// DA3SHBOARD CARDS
-
+// DASHBOARD CARDS
 .dashboard-card {
   margin: 20px!important;
 }
 
-// SORTABLE CARDS
-
+// // SORTABLE CARDS
 #results li {
   cursor: grab;
 }
