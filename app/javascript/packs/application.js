@@ -15,10 +15,13 @@ ActiveStorage.start()
 import "controllers"
 import "bootstrap"
 
-// Sortable
-import { initSortable } from "../components/init_sortable"
+// Internal imports, e.g:
+// import { initSelect2 } from '../components/init_select2';
 
-document.addEventListener('tubolinks:load', () => {
+import { initSortable } from "../components/init_sortable";
+
+document.addEventListener('turbolinks:load', () => {
   initSortable();
   console.log('hello')
 });
+

@@ -1,4 +1,4 @@
-// app/javascript/channels/sortable_controller.js
+
 import Sortable from "sortablejs"
 
 const list = document.getElementById("results")
