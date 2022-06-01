@@ -9,9 +9,5 @@ const context = require.context("controllers", true, /_controller\.js$/)
 application.load(definitionsFromContext(context))
 
 
-// Sortable
-import { initSortable } from "..src/plugins/init_sortable.js"
-initSortable()
-
 const channels = require.context('.', true, /_channel\.js$/)
 channels.keys().forEach(channels)
