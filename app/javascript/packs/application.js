@@ -20,4 +20,5 @@ import { initSortable } from "../components/init_sortable"
 
 document.addEventListener('tubolinks:load', () => {
   initSortable();
+  console.log('hello')
 });
