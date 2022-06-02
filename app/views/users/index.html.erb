@@ -5,7 +5,7 @@
   <%# ************** Display Users/Bitches ************** %>
     <div class="container">
         <% @users.each do |user| %>
-        <div>
+        <div class="card border-left-primary shadow h-100 py-2">
           <div class="list-name font-gamma"><%= User.name %></div>
           <div class="item-btn font-gamma"><%= link_to 'Show Bitches Profil', user_path(user) %></div>
         </div>
