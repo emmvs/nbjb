@@ -1,0 +1,22 @@
+<%# app/views/users/show.html.erb %>
+<div class="container-users">
+  <%# ************** Display Specific User ************** %>
+  <h1 class="font-alpha">One of the Bitches</h1>
+    <div>
+      <div class="container-places">
+      <ol>
+        <div><p class="font-gamma">Name: <%= @user.first_name %> </p></div>
+        <div><p class="font-gamma">Address: <%= @user.last_name %> </p></div>
+        <div><p class="font-gamma">Barkeeper: <%= @user.email %>
+        <div><p class="font-gamma">Average Beer Price: <%= @user.birthday  %>
+        <div><p class="font-gamma">Asshole Score: <%= @user.first_game %>
+        <div><p class="font-gamma">Dating Rating: <%= @user.sign %>
+        <div><p class="font-gamma">Bathroom Rating: <%= @user.favorite_drink %>
+        <div><p class="font-gamma">Bathroom Rating: <%= @user.lucky_number %>
+        <div><p class="font-gamma">Bathroom Rating: <%= @user.bio %>
+        <div><p class="font-gamma">Bathroom Rating: <%= @user.wins %>
+        <div><p class="font-gamma">Bathroom Rating: <%= @user.losses %>
+        <div class="item-btn btn font-gamma"><%= link_to 'All Bitches', users_path(@user) %></div>
+      </ol>
+    </div>
+  </div>
