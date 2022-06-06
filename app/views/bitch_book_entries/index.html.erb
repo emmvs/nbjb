@@ -1,27 +1,28 @@
 <%# app/views/bitch_book_entries/index.html.erb %>
 <h1 class="font-beta">The Bitchbook</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bitch_book_entries.each do |bitch_book_entry| %>
-    <div>
-      <div class="list-name font-gamma"><%= BitchBookEntry.last.title %></div>
-    </div>
+<%# Write Here what to do next %>
+<%# Maybe some pretty design? %>
+<div class="container">
+  <table>
+    <thead>
       <tr>
-        <td><%= link_to 'Show', bitch_book_entry %></td>
-        <td><%= link_to 'Edit', edit_bitch_book_entry_path(bitch_book_entry) %></td>
-        <td><%= link_to 'Destroy', bitch_book_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Bitch Book Entry', new_bitch_book_entry_path %>
+    <tbody>
+      <% @bitch_book_entries.each do |bitch_book_entry| %>
+      <div>
+        <div class="list-name font-gamma"><%= BitchBookEntry.last.title %></div>
+      </div>
+        <tr>
+          <td><%= link_to 'Show', bitch_book_entry %></td>
+          <td><%= link_to 'Edit', edit_bitch_book_entry_path(bitch_book_entry) %></td>
+          <td><%= link_to 'Destroy', bitch_book_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'New Bitch Book Entry', new_bitch_book_entry_path %>
+</div>
