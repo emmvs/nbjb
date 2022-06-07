@@ -97,6 +97,14 @@ Night.create!(
   place: Place.first
 )
 
+Night.create!(
+  title: "Marlenes wonderful Billard Night on June 8th 2022",
+  start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
+  end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
+  user: User.first,
+  place: Place.first
+)
+
 BitchBookEntry.create!(
   topic: "History",
   title: "When was Billard invented?",
@@ -107,6 +115,21 @@ BitchBookEntry.create!(
         pockets on a large rectangular table.",
   raiting: 8,
   user: User.first
+)
+
+BitchBookEntry.create!(
+  topic: "Rule",
+  title: "How to place Billiard Balls correctly?",
+  text: "Did you know that... for a game of eight-ball,
+  you use balls that are numbered from 1 to 15,
+  but only three of these balls have a specific placement in the triangle.
+  The 8 ball must be at the centre and the two balls in the lower corners of the triangle
+  must be different (one solid and one striped),
+  but it doesnt matter which one is in which corner.
+  The other 12 balls must be placed in alternation,
+  including the one at the top corner of the triangle. Easy, right?",
+  raiting: 9,
+  user: User.last
 )
 
 puts "🎱🎱🎱🎱🎱 Amazing! We are done 🎱🎱🎱🎱🎱"

@@ -1,4 +1,17 @@
+<%#app/views/bitch_book_entries/show.html.erb%>
+<div class="container bitch-book-entries">
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_bitch_book_entry_path(@bitch_book_entry) %> |
-<%= link_to 'Back', bitch_book_entries_path %>
+<%# ************** Display Specific Bitch Book Entry ************** %>
+  <h1 class="font-alpha"><%= @bitch_book_entry.title %></h1>
+    <div>
+      <div class="container-bitch-book-entries">
+        <div>
+          <div class="list-name font-gamma"><%= @bitch_book_entry.text %></div>
+          <%# <div class="list-name font-gamma"><%= @@bitch_book_entry.user %></div>
+          <div class="item-btn font-gamma"><%= link_to 'All Bitchbook Entries', bitch_book_entries_path(@bitch_book_entry) %></div>
+        </div>
+    </div>
+  <%= link_to 'Edit', edit_bitch_book_entry_path(@bitch_book_entry) %> |
+  <%= link_to 'Back', bitch_book_entries_path %>
+</div>
