@@ -6,7 +6,9 @@
       <% @nights.each do |night| %>
       <div>
         <div class="list-name font-gamma"><%= night.title %></div>
+        <%# Choose different nights %>
         <div class="item-btn font-gamma"><%= link_to 'Show Night', night_path(night) %></div>
+        <%# Create different nights %>
         <div class="item-btn font-gamma"><%= link_to 'Add new night', new_night_path(@night) %></div>
       </div>
       <% end %>
