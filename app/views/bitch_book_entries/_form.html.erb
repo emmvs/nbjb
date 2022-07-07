@@ -1,4 +1,8 @@
 <%# app/views/bitch_book_entries/_form.html.erb %>
+
+<%# ************** TO DO ************** %>
+
+<%# ************** Create/Edit Bitch Book Entry ************** %>
 <%= simple_form_for(@bitch_book_entry) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
