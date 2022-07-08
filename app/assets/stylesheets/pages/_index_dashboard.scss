@@ -8,19 +8,19 @@
 
 // DASHBOARD CARDS
 .dashboard-card {
-  margin: 20px!important;
+  margin: 20px !important;
 }
 
 // // SORTABLE CARDS
-#results li {
+#results .card-dashboard {
   cursor: grab;
 }
 
-#results li:active {
+#results .card-dashboard:active {
   cursor: grabbing;
 }
 
-#results li.ghost {
+#results .card-dashboard.ghost {
   filter: grayscale(1);
   opacity: 0.5;
 }
