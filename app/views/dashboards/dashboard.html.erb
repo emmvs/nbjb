@@ -20,63 +20,65 @@
   <%# ****** Sortable ****** %>
   <div data-controller="sortable" id="results">
     <!-- Content Row -->
-    <div class="col-xl-2 col-md-4 mb-4 item-lucky-number">
-      <div class="card card-dashboard border-left-primary shadow h-100 py-2">
-        <div class="card-body results">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2"></div>
-            <h3 class="mb-1 text-xs font-gamma"> Your lucky number is: <%= current_user.lucky_number %></h3>
+    <%# <div class="card-container"> %>
+      <div class="col-xl-2 col-md-4 mb-4 item-lucky-number">
+        <div class="card card-dashboard border-left-primary shadow h-100 py-2">
+          <div class="card-body results">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2"></div>
+              <h3 class="mb-1 text-xs font-gamma"> Your lucky number is: <%= current_user.lucky_number %></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="col-xl-2 col-md-4 mb-4 item-favorite-drink">
+        <div class="card card-dashboard border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2"></div>
+              <h3 class="font-gamma"> Your favorite drink is: <%= current_user.favorite_drink %></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="col-xl-2 col-md-4 mb-4 item-sign">
+        <div class="card card-dashboard border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2"></div>
+              <h3 class="font-gamma"> Your sign is: <%= current_user.sign %></h3>
+              <a href="#" class="btn btn-primary">Who else? ✨</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="col-xl-2 col-md-4 mb-4 item-wins">
+        <div class="card card-dashboard border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2"></div>
+              <h3 class="font-gamma"> You won : <%= current_user.wins %> times!</h3>
+              <a href="#" class="btn btn-primary">Last Night 🍸</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="col-xl-2 col-md-4 mb-4 item-losses">
+        <div class="card card-dashboard border-left-primary shadow h-100 py-2">
+          <div class="card-body">
+            <div class="row no-gutters align-items-center">
+              <div class="col mr-2"></div>
+              <h3 class="font-gamma"> You lost : <%= current_user.losses %> times! 🎱 </h3>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <br>
-    <div class="col-xl-2 col-md-4 mb-4 item-favorite-drink">
-      <div class="card card-dashboard border-left-primary shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2"></div>
-            <h3 class="font-gamma"> Your favorite drink is: <%= current_user.favorite_drink %></h3>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <div class="col-xl-2 col-md-4 mb-4 item-sign">
-      <div class="card card-dashboard border-left-primary shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2"></div>
-            <h3 class="font-gamma"> Your sign is: <%= current_user.sign %></h3>
-            <a href="#" class="btn btn-primary">Who else? ✨</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <div class="col-xl-2 col-md-4 mb-4 item-wins">
-      <div class="card card-dashboard border-left-primary shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2"></div>
-            <h3 class="font-gamma"> You won : <%= current_user.wins %> times!</h3>
-            <a href="#" class="btn btn-primary">Last Night 🍸</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <div class="col-xl-2 col-md-4 mb-4 item-losses">
-      <div class="card card-dashboard border-left-primary shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2"></div>
-            <h3 class="font-gamma"> You lost : <%= current_user.losses %> times! 🎱 </h3>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%# </div> %>
   <br>
   <div class="card">
     <div class="card-header font-gamma">

@@ -11,6 +11,10 @@
   margin: 20px !important;
 }
 
+.card-container {
+  display: flex;
+}
+
 // // SORTABLE CARDS
 #results .card-dashboard {
   cursor: grab;
