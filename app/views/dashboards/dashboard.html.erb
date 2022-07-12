@@ -17,11 +17,14 @@
     <h3 class="col-xl-4 card font-gamma"><%= current_user.bio %> </h3>
   </div>
   <br>
+
   <%# ****** Sortable ****** %>
   <div data-controller="sortable" id="results">
     <!-- Content Row -->
-    <%# <div class="card-container"> %>
-      <div class="col-xl-2 col-md-4 mb-4 item-lucky-number">
+    <div class="sortable-container">
+      <%# <div class="col-xl-2 col-md-4 mb-4 item-lucky-number"> %>
+      <%# <div class="col-sm"> %>
+      <div class="item-lucky-number">
         <div class="card card-dashboard border-left-primary shadow h-100 py-2">
           <div class="card-body results">
             <div class="row no-gutters align-items-center">
@@ -32,7 +35,9 @@
         </div>
       </div>
       <br>
-      <div class="col-xl-2 col-md-4 mb-4 item-favorite-drink">
+      <%# <div class="col-xl-2 col-md-4 mb-4 item-favorite-drink"> %>
+      <%# <div class="col-sm"> %>
+      <div class="item-favorite-drink">
         <div class="card card-dashboard border-left-primary shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
@@ -78,7 +83,7 @@
         </div>
       </div>
     </div>
-  <%# </div> %>
+  </div>
   <br>
   <div class="card">
     <div class="card-header font-gamma">
