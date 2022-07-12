@@ -16,6 +16,12 @@
   flex-wrap: wrap;
 }
 
+// // SORTABLE CONTAINER
+.sortable-container {
+display: flex;
+justify-content: space-between;
+}
+
 // // SORTABLE CARDS
 #results .card-dashboard {
   cursor: grab;
