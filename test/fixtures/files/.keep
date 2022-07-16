@@ -1,0 +1,7 @@
+<!-- Fixtures are a way of organizing test data; they reside in the fixtures directory.
+
+A jobs directory will also be created when an associated test is first generated.
+
+The test_helper.rb file holds the default configuration for your tests.
+
+The application_system_test_case.rb holds the default configuration for your system tests. -->
