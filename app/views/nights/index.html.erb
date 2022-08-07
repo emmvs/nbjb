@@ -3,6 +3,7 @@
 
 <%# ************** TO DO ************** %>
 <%# Create Nights Index Display %>
+<%# Create Nights Footer? %>
 
 <%# ************** Display Nights ************** %>
   <div class="container">
@@ -10,16 +11,14 @@
       <div>
         <%# Create different nights %>
         <%# Who can create different nights? The members? Strangers?%>
-        <div class="col-xl-2 col-md-4 mb-4 item-night">
-          <div class="card card-nights border-left-primary shadow h-100 py-2">
-            <div class="card-body results">
+        <div class="col-xl-2 col-md-4 mb-4">
+          <div class="card border-left-primary shadow h-100 py-2">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2"></div>
-                <h3 class="mb-1 text-xs font-gamma"> <%= night.title%></h3>
-                <h3 class="mb-1 text-xs font-delta"> <%= link_to 'Show Night', night_path(night)%></h3>
-                <h3 class="mb-1 text-xs font-delta"> <%= link_to 'Add new night', new_night_path(@night)%></h3>
+                <h2 class="mb-1 text-xs font-delta"> <%= night.title%></h2>
+                <p class="mb-1 text-xs font-gamma"> <%= link_to 'Show Night', night_path(night)%></p>
+                <p class="mb-1 text-xs font-gamma"> <%= link_to 'Add new night', new_night_path(@night)%></p>
               </div>
-            </div>
           </div>
         </div>
       </div>
