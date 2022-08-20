@@ -93,15 +93,39 @@ Place.create!(
 )
 
 Night.create!(
-  title: "Emmas Amazing Night out on May 26th 2022",
-  start_time: Time.new(2022, 5, 4, 15, 0, 0, '+02:00'),
-  end_time: Time.new(2022, 5, 4, 15, 30, 0, '+02:00'),
+  title: "First NB-JB Game Ever! 🎱",
+  start_time: Time.new(2020, 5, 4, 15, 0, 0, '+02:00'),
+  end_time: Time.new(2020, 5, 4, 15, 30, 0, '+02:00'),
   user: User.first,
   place: Place.first
 )
 
 Night.create!(
-  title: "Marlenes wonderful Billard Night on June 8th 2022",
+  title: "Marlene's wonderful Billard Night",
+  start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
+  end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
+  user: User.first,
+  place: Place.first
+)
+
+Night.create!(
+  title: "Emma's Birthday Billard Night",
+  start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
+  end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
+  user: User.first,
+  place: Place.first
+)
+
+Night.create!(
+  title: "Florence's Birthday Billard Night",
+  start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
+  end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
+  user: User.first,
+  place: Place.first
+)
+
+Night.create!(
+  title: "Ida's Birthday Billard Night",
   start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
   end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
   user: User.first,

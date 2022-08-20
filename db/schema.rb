@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 2022_05_20_154113) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "first_name"
     t.string "last_name"
+    t.integer "role", default: 0
     t.date "birthday"
     t.date "first_game"
     t.string "sign"
