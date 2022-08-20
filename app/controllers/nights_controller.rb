@@ -19,7 +19,7 @@ class NightsController < ApplicationController
 
   def create
     @night = Night.new(night_params)
-    if @night.save
+    if @night.save!
       redirect_to nights_path
     else
       render :new
