@@ -1,4 +1,6 @@
 # app/controllers/nights_controller.rb
+require 'pry-byebug'
+
 class NightsController < ApplicationController
   before_action :set_night, only: %i[show edit update destroy]
 
@@ -14,10 +16,12 @@ class NightsController < ApplicationController
   end
 
   def new
+    binding.pry
     @night = Night.new
   end
 
   def create
+    binding.pry
     @night = Night.new(night_params)
     if @night.save!
       redirect_to nights_path
