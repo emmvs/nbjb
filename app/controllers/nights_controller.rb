@@ -1,5 +1,6 @@
 # app/controllers/nights_controller.rb
 require 'pry-byebug'
+# not sure how to write a comment on new laptop
 
 class NightsController < ApplicationController
   before_action :set_night, only: %i[show edit update destroy]
