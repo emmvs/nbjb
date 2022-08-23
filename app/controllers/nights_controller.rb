@@ -1,5 +1,5 @@
 # app/controllers/nights_controller.rb
-require 'pry-byebug'
+# require 'pry-byebug'
 # not sure how to write a comment on new laptop
 
 class NightsController < ApplicationController
@@ -17,7 +17,7 @@ class NightsController < ApplicationController
   end
 
   def new
-    binding.pry
+    # binding.pry
     @night = Night.new
   end
 
