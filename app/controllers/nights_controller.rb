@@ -7,14 +7,14 @@ class NightsController < ApplicationController
   before_action :set_night, only: %i[show edit update destroy]
 
   def index
-    if params[:query].present?
-      @query = params[:query]
-      @nights = Night.where("name ILIKE ?", "%#{params[:query]}%")
+    # if params[:query].present?
+    #  @query = params[:query]
+    #  @nights = Night.where("name ILIKE ?", "%#{params[:query]}%")
       # Preventing SQL Injection and Database error for
       # unknown characters
-    else
+    # else
       @nights = Night.all
-    end
+    # end
   end
 
   def new
@@ -55,6 +55,6 @@ class NightsController < ApplicationController
   end
 
   def night_params
-    params.require(:night).permit(:start_time, :end_time, :user, :place)
+    params.require(:night).permit(:start_time, :end_time, :user, :place, :title)
   end
 end
