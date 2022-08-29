@@ -9,10 +9,10 @@ require "open-uri"
 
 puts "Cleaning Database! 🧹"
 
-Night.destroy_all
-User.destroy_all
 Place.destroy_all
+Night.destroy_all
 BitchBookEntry.destroy_all
+User.destroy_all
 
 puts "Database is clean! 🧼"
 
@@ -27,7 +27,7 @@ User.create!(
   # first_game: 20200726120000,
   role: 1,
   sign: "Virgo ♍️",
-  favorite_drink: "Espresso Martini",
+  favorite_drink: "Whiskey 🥃",
   lucky_number: 2,
   bio: "Hello, I'm Emma and I am the Founder of NBJB",
   wins: 6,
@@ -45,7 +45,7 @@ User.create!(
   # first_game: 20200726120000,
   role: 1,
   sign: "Gemini ♊️",
-  favorite_drink: "Espresso Martini",
+  favorite_drink: "Espresso Martini 🍸",
   lucky_number: 6,
   bio: "Hello, I'm Marlene and I am the Founder of NBJB",
   wins: 6,
@@ -63,7 +63,7 @@ User.create!(
   # first_game: 20210507120000,
   role: 1,
   sign: "Taurus ♉️",
-  favorite_drink: "Espresso Martini",
+  favorite_drink: "Wine 🍷",
   lucky_number: 7,
   bio: "Hello, I'm Florence and this is my amazing Bio",
   wins: 6,
@@ -140,7 +140,7 @@ BitchBookEntry.create!(
         game in Britain from about 1770 until the 1920's was
         English Billiards, played with three balls and six
         pockets on a large rectangular table.",
-  raiting: 8,
+  rating: 8,
   user: User.first
 )
 
@@ -155,7 +155,7 @@ BitchBookEntry.create!(
   but it doesnt matter which one is in which corner.
   The other 12 balls must be placed in alternation,
   including the one at the top corner of the triangle. Easy, right?",
-  raiting: 9,
+  rating: 9,
   user: User.last
 )
 
