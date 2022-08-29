@@ -1,4 +1,5 @@
 # app/controllers/nights_controller.rb
+
 # require 'pry-byebug'
 # not sure how to write a comment on new laptop
 

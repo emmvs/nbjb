@@ -1,4 +1,5 @@
 # app/controllers/places_controller.rb
+
 class PlacesController < ApplicationController
   # skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_place, only: %i[show edit update destroy]

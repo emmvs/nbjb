@@ -1,3 +1,5 @@
+# app/controllers/bitchbookentries_controller.rb
+
 class BitchBookEntriesController < ApplicationController
   before_action :set_bitch_book_entry, only: %i[show edit update destroy]
 

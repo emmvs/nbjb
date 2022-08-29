@@ -1,14 +1,15 @@
 # app/controllers/users_controller.rb
+
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
 
   def index
-    if params[:query].present?
-      @query = params[:query]
-      @users = User.where("name ILIKE ?", "%#{params[:query]}%")
-    else
-      @users = User.all
-    end
+    # if params[:query].present?
+    #  @query = params[:query]
+    # @users = User.where("name ILIKE ?", "%#{params[:query]}%")
+    # else
+    @users = User.all
+    # end
   end
 
   def new
@@ -17,8 +18,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.save
-      redirect_to users_path
+    if @user.save!
+      redirect_to user_path(@user)
+      raise
     else
       render :new
     end

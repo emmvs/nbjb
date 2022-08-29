@@ -1,4 +1,5 @@
-# app/controllers/gamess_controller.rb
+# app/controllers/games_controller.rb
+
 class GamesController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
   before_action :policy_scope_games, only: %i[index show new edit update destroy]
