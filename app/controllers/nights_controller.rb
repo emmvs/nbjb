@@ -10,10 +10,10 @@ class NightsController < ApplicationController
     # if params[:query].present?
     #  @query = params[:query]
     #  @nights = Night.where("name ILIKE ?", "%#{params[:query]}%")
-      # Preventing SQL Injection and Database error for
-      # unknown characters
+    # Preventing SQL Injection and Database error for
+    # unknown characters
     # else
-      @nights = Night.all
+    @nights = Night.all
     # end
   end
 
@@ -23,7 +23,7 @@ class NightsController < ApplicationController
   end
 
   def create
-    binding.pry
+    # binding.pry
     @night = Night.new(night_params)
     if @night.save!
       redirect_to nights_path
