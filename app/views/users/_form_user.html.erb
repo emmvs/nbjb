@@ -1,0 +1,33 @@
+<%# app/views/users/_form_user.html.erb %>
+
+<div class="container py-5 form-adjust">
+  <div class="row form-bg">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-4 shadow form-night">
+        <h3 class="font-delta">Add a new User</h3>
+        <%= simple_form_for(@user) do |f| %>
+          <%= f.input :first_name, placeholder: "What's your first name, love?" %>
+          <%= f.input :last_name, placeholder: "What's your last name, love?" %>
+          <%= f.input :email, placeholder: 'emma@no-balls-just-bitches.com' %>
+          <%# <%= f.input :photo, label: "Choose the sassy picture for your camel"  %>
+          <%= f.input :role, placeholder: '2' %>
+          <%# <%= f.select :purpose, ["Player", "Admin", "Manager"] %>
+          <%= f.input :birthday, placeholder: 'When were you born?🎂' %>
+          <%= f.input :sign, placeholder: "And what's your sign?♉️" %>
+          <%= f.input :first_game, placeholder: 'When was your first game?🎱' %>
+          <%= f.input :favorite_drink, placeholder: "What's your drink?🧃" %>
+          <%= f.input :lucky_number, placeholder: "2" %>
+          <%# <label for="purpose">Your camel's purpose:&nbsp;&nbsp;&nbsp;</label> %>
+          <%# <%= f.select :purpose, ["Movie Production", "Desert Trip", "Race", "Photoshoot", "Birthday Party", "Fair", "Present", "Wedding"] %>
+          <%= f.input :bio, placeholder: 'Let us know more about you!' %>
+          <% if f.object.new_record? %>
+            <%= f.submit "Create User", class: "btn btn-secondary" %>
+          <% else %>
+            <%= f.submit "Edit User", class: "btn btn-secondary" %>
+          <% end %>
+          <%= link_to "Cancel", :back, {:class=>"form--link"} %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
