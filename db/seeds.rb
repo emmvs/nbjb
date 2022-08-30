@@ -1,3 +1,7 @@
+# db/seeds.rb
+
+require "open-uri"
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -5,8 +9,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require "open-uri"
 
+# 1. Delete all Data from Database
 puts "Cleaning Database! 🧹"
 
 Place.destroy_all
@@ -16,6 +20,7 @@ User.destroy_all
 
 puts "Database is clean! 🧼"
 
+# 2. Create new Users (aka Bitches)
 User.create!(
   email: "emma@test.com",
   password: "123456",
@@ -70,6 +75,7 @@ User.create!(
   losses: 4
 )
 
+# 3. Create new Places
 Place.create!(
   name: "Bierbaum 3",
   address: "Neukölln",
@@ -92,6 +98,7 @@ Place.create!(
   user: User.last
 )
 
+# 4. Create new Nights 🌌
 Night.create!(
   title: "First NB-JB Game Ever! 🎱",
   start_time: Time.new(2020, 5, 4, 15, 0, 0, '+02:00'),
@@ -132,6 +139,7 @@ Night.create!(
   place: Place.first
 )
 
+# 5. Create new Bitch Book Entries
 BitchBookEntry.create!(
   topic: "History",
   title: "When was Billard invented?",
@@ -159,4 +167,12 @@ BitchBookEntry.create!(
   user: User.last
 )
 
+# 6. Show created Seeds
+p "Created #{User.count} Bitches! 🎱"
+sleep(1)
+p "Created #{Place.count} Places! 🎱"
+sleep(1)
+p "Created #{Night.count} Nights! 🎱"
+sleep(1)
+p "Created #{BitchBookEntry.count} Bitch Book Entries! 🎱"
 puts "🎱🎱🎱🎱🎱 Amazing! We are done 🎱🎱🎱🎱🎱"
