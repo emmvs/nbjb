@@ -17,7 +17,7 @@ Place.destroy_all
 Night.destroy_all
 BitchBookEntry.destroy_all
 User.destroy_all
-
+sleep(2)
 puts "Database is clean! 🧼"
 
 # 2. Create new Users (aka Bitches)
