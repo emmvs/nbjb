@@ -75,6 +75,24 @@ User.create!(
   losses: 4
 )
 
+User.create!(
+  email: "ida@test.com",
+  password: "123456",
+  # language: 2,
+  first_name: "Ida",
+  last_name: "Lieback",
+  # phone_number: "+14154259973",
+  # birthday: 19990507120000,
+  # first_game: 20210507120000,
+  # role: 1,
+  sign: "Gemini♊︎",
+  favorite_drink: "Lemonade🍋",
+  lucky_number: 42,
+  bio: "Hello, I'm Ida and this is my amazing Bio",
+  wins: 10,
+  losses: 2
+)
+
 # 3. Create new Places
 Place.create!(
   name: "Bierbaum 3",

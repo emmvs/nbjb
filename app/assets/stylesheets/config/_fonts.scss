@@ -1,6 +1,7 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500|Raleway:700,900");
+@import url("https: //fonts.googleapis.com/css?family=Space Grotesk");
 
 // Define fonts for body and headers
 $body-font: "Work Sans", "Helvetica", "sans-serif";
@@ -19,8 +20,8 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 // ********* No Balls - Just Bitches *********
 // ********* Fonts *********
 
-$primary-font: "Updock", "Helvetica", "sans-serif"; // 300, 400
-$secondary-font: "Updock", "Helvetica", "sans-serif"; // 300, 400, 600
+$primary-font: "Space Grotesk", "Space Grotesk", "sans-serif"; // 300, 400
+$secondary-font: "Space Grotesk", "Space Grotesk", "sans-serif"; // 300, 400, 600
 $font-weigh--light: 400;
 $font-weigh--normal: 500;
 $font-weigh--bold: 700;
