@@ -4,12 +4,21 @@
 
   <%# ************** Display Users/Bitches ************** %>
     <div class="container">
-        <% @users.each do |user| %>
-        <div class="card border-left-primary shadow h-100 py-2">
-          <div class="list-name font-gamma"><%= user.first_name %></div>
-          <div class="item-btn font-gamma"><%= link_to 'Show Bitches Profil', user_path(user) %></div>
+      <div class="grid">
+          <% @users.each do |user| %>
+          <div class="row">
+            <div class ="col-sm-6">
+              <div class="card bg-light mb-3 mt-3 border-left-primary shadow h-100 py-2" style="width: 18rem;">
+                <img class="card-img-top" src="https://images.unsplash.com/photo-1544281153-6603be88b354?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmlsbGlhcmRzfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="Billard card image">
+                <div class="card-body">
+                  <div class="card-text list-name mb-1 text-xs font-gamma"><%= user.first_name %></div>
+                  <div class="card-text item-btn card-link mb-1 text-xs"><%= link_to 'Show Bitches Profil', user_path(user) %></div>
+                </div>
+              </div>
+            </div>
+          <% end %>
         </div>
-        <% end %>
+      </div>
     </div>
       <div class="item-btn"><%= link_to 'Add new User', new_user_path(@user) %></div>
 </div>
