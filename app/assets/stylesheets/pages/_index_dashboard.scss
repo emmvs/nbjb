@@ -16,13 +16,17 @@
   flex-wrap: wrap;
 }
 
-// // SORTABLE CONTAINER
+.item-lucky-number {
+  border-radius: 20% !important;
+}
+
+// SORTABLE CONTAINER
 .sortable-container {
 display: flex;
 justify-content: space-between;
 }
 
-// // SORTABLE CARDS
+// SORTABLE CARDS
 #results .card-dashboard {
   cursor: grab;
 }

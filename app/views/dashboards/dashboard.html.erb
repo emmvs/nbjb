@@ -7,14 +7,14 @@
 <%# > Feature Add Places, Role User, Moderator or Admin %>
 
 <%# ************** DASHBOARD ************** %>
-<section class="container-dashboard font-alpha">
+<section class="container-dashboard m-2 font-alpha">
   <div class="item-hello">
     <h2 class="font-beta">Hi, <%= current_user.first_name %>!</h2>
     <h2 class="item-welcome font-gamma">and welcome to your personal Dashboard</h2>
   </div>
   <br>
   <div>
-    <h3 class="col-xl-4 card font-gamma"><%= current_user.bio %> </h3>
+    <h3 class="m-2 col-xl-4 card font-gamma">"<%= current_user.bio %>"</h3>
   </div>
   <br>
 
@@ -22,7 +22,7 @@
   <div data-controller="sortable" id="results" class="sortable-container">
     <!-- Content Row -->
       <div class="col-xl-2 col-md-4 mb-4 item-lucky-number">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card m-2 rounded border-left-primary shadow h-100 py-2">
           <div class="card-body results">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2"></div>
@@ -33,7 +33,7 @@
       </div>
       <br>
       <div class="col-xl-2 col-md-4 mb-4 item-favorite-drink">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card m-2 border-left-primary shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2"></div>
@@ -44,7 +44,7 @@
       </div>
       <br>
       <div class="col-xl-2 col-md-4 mb-4 item-sign">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card m-2 border-left-primary shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2"></div>
@@ -56,7 +56,7 @@
       </div>
       <br>
       <div class="col-xl-2 col-md-4 mb-4 item-wins">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card m-2 border-left-primary shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2"></div>
@@ -68,7 +68,7 @@
       </div>
       <br>
       <div class="col-xl-2 col-md-4 mb-4 item-losses">
-        <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card m-2 border-left-primary shadow h-100 py-2">
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2"></div>
@@ -79,7 +79,7 @@
       </div>
     </div>
   <br>
-  <div class="card">
+  <div class="card m-2">
     <div class="card-header font-gamma">
       Bitchbook Entry of the Day 🎯
     </div>
