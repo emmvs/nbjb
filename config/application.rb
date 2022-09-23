@@ -23,5 +23,9 @@ module NoBallsJustBitches
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Enables Fonts 🪄 in the Assets by adding it to our paths array
+    config.assets.enabled = true
+    config.assets.paths << Rails.root.join('/app/assets/fonts')
   end
 end
