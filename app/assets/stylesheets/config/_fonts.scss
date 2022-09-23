@@ -2,13 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500|Raleway:700,900");
 @import url("https: //fonts.googleapis.com/css?family=Space Grotesk:400,500");
-@font-face {
-  font-family: "1up";
-  src: url(/app/assets/fonts/1up/);
-}
 
 // Define fonts for body and headers
-$body-font: "1up", "1up", "sans-serif";
+$body-font: "Space Grotesk", "Arial Black", "sans-serif";
 $headers-font: "1up", "1up", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines

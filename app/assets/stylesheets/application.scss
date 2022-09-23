@@ -1,6 +1,9 @@
 // app/assets/stylesheets/application.scss
 
-// Graphical variables
+// Graphical Variables & Fonts
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
 @font-face {
   font-family: "Space Grotesk";
   src: url(/app/assets/fonts/Space_Grotesk/);
@@ -9,15 +12,12 @@
   font-family: "1up";
   src: url(/app/assets/fonts/1up/);
 }
-@import "config/fonts";
-@import "config/colors";
-@import "config/bootstrap_variables";
 
-// External libraries
+// External Libraries
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
 
-// Your CSS partials
+// Your CSS Partials
 @import "components/index";
 @import "pages/index";
 
@@ -47,25 +47,25 @@ body {
   position: relative;
   font-family: $primary-font;
   font-size: $font-size-64;
-  font-weight: $font-weigh--extra;
+  // font-weight: $font-weigh--extra;
   text-align: center;
   // text-transform: uppercase;
-  color: $font-color;
-  margin-top: .5rem;
-  margin-bottom: 1.5rem;
-  width: fit-content;
-  z-index: 2;
+  // color: $font-color;
+  // margin-top: .5rem;
+  // margin-bottom: 1.5rem;
+  // width: fit-content;
+  // z-index: 2;
 
-  &:after {
-    content: '';
-    position: absolute;
-    width: 2em;
-    height: .6em;
-    right: 0;
-    bottom: 0;
-    background: $primary-color;
-    z-index: -1;
-  }
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   width: 2em;
+  //   height: .6em;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: $primary-color;
+  //   z-index: -1;
+  // }
 }
 
 .font-beta {
@@ -75,21 +75,21 @@ body {
   font-weight: $font-weigh--extra;
   text-transform: uppercase;
   color: $font-color;
-  margin-top: .5rem;
-  margin-bottom: 1.2rem;
-  width: fit-content;
-  z-index: 2;
+  // margin-top: .5rem;
+  // margin-bottom: 1.2rem;
+  // width: fit-content;
+  // z-index: 2;
 
-  &:after {
-    content: "";
-    position: absolute;
-    width: 2em;
-    height: .6em;
-    right: 0;
-    bottom: 0;
-    background: $secondary-color--dark;
-    z-index: -1;
-  }
+  // &:after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 2em;
+  //   height: .6em;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: $secondary-color--dark;
+  //   z-index: -1;
+  // }
 }
 
 .font-delta {
@@ -103,16 +103,16 @@ body {
   width: fit-content;
   z-index: 2;
 
-  &:after {
-    position: absolute;
-    content: '';
-    width: 2em;
-    height: .6em;
-    right: 0;
-    bottom: 0;
-    background: $sub-color;
-    z-index: -1;
-  }
+  // &:after {
+  //   position: absolute;
+  //   content: '';
+  //   width: 2em;
+  //   height: .6em;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: $sub-color;
+  //   z-index: -1;
+  // }
 }
 
 .font-gamma {
@@ -126,14 +126,14 @@ body {
   width: fit-content;
   z-index: 2;
 
-  &:after {
-    position: absolute;
-    content: '';
-    width: 2em;
-    height: .6em;
-    right: 0;
-    bottom: 0;
-    background: $secondary-color;
-    z-index: -1;
-  }
+  // &:after {
+  //   position: absolute;
+  //   content: '';
+  //   width: 2em;
+  //   height: .6em;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: $secondary-color;
+  //   z-index: -1;
+  // }
 }
