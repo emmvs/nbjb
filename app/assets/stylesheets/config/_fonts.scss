@@ -2,10 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500|Raleway:700,900");
 @import url("https: //fonts.googleapis.com/css?family=Space Grotesk:400,500");
+@font-face {
+  font-family: "1up";
+  src: url(/app/assets/fonts/1up/);
+}
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$body-font: "1up", "1up", "sans-serif";
+$headers-font: "1up", "1up", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -20,8 +24,8 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 // ********* No Balls - Just Bitches *********
 // ********* Fonts *********
 
-$primary-font: "Roboto", "Roboto", "sans-serif"; // 300, 400
-$secondary-font: "Roboto", "Roboto", "sans-serif"; // 300, 400, 600
+$primary-font: "1up", "Arial Black", "sans-serif"; // 300, 400
+$secondary-font: "1up", "Arial Black", "sans-serif"; // 300, 400, 600
 $font-weigh--light: 400;
 $font-weigh--normal: 500;
 $font-weigh--bold: 700;
