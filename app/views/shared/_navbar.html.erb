@@ -32,8 +32,9 @@
 
 <%# ************** Navbar Dropdown ************** %>
         <li class="nav-item dropdown">
-          <%= image_tag "https://www.clipartmax.com/png/middle/82-823494_billiard-ball-clipart-9-ball-pool-ball-9-png.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= image_tag "avatar.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <%= link_to "My Profile", dashboards_dashboard_path, class: "dropdown-item" %>
             <%= link_to "Plan Night", new_night_path, class: "dropdown-item" %>
             <%= link_to "All Nights", nights_path, class: "dropdown-item" %>
             <%= link_to "Places", places_path, class: "dropdown-item" %>
