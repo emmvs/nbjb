@@ -42,7 +42,6 @@
 
 body {
   background-color: rgb(170, 216, 246);
-  // background-image: linear-gradient(315deg, #3b3b3b 0%, #9ed49e 74%);
   background-size: cover;
 }
 
@@ -50,25 +49,8 @@ body {
   position: relative;
   font-family: $primary-font;
   font-size: $font-size-64;
-  // font-weight: $font-weigh--extra;
   text-align: center;
-  // text-transform: uppercase;
   color: $font-color;
-  // margin-top: .5rem;
-  // margin-bottom: 1.5rem;
-  // width: fit-content;
-  // z-index: 2;
-
-  // &:after {
-  //   content: '';
-  //   position: absolute;
-  //   width: 2em;
-  //   height: .6em;
-  //   right: 0;
-  //   bottom: 0;
-  //   background: $primary-color;
-  //   z-index: -1;
-  // }
 }
 
 .font-beta {
@@ -78,21 +60,6 @@ body {
   font-weight: $font-weigh--extra;
   text-transform: uppercase;
   color: $font-color;
-  // margin-top: .5rem;
-  // margin-bottom: 1.2rem;
-  // width: fit-content;
-  // z-index: 2;
-
-  // &:after {
-  //   content: "";
-  //   position: absolute;
-  //   width: 2em;
-  //   height: .6em;
-  //   right: 0;
-  //   bottom: 0;
-  //   background: $secondary-color--dark;
-  //   z-index: -1;
-  // }
 }
 
 .font-delta {
@@ -105,17 +72,6 @@ body {
   margin-bottom: 1rem;
   width: fit-content;
   z-index: 2;
-
-  // &:after {
-  //   position: absolute;
-  //   content: '';
-  //   width: 2em;
-  //   height: .6em;
-  //   right: 0;
-  //   bottom: 0;
-  //   background: $sub-color;
-  //   z-index: -1;
-  // }
 }
 
 .font-gamma {
@@ -128,15 +84,4 @@ body {
   position: relative;
   width: fit-content;
   z-index: 2;
-
-  // &:after {
-  //   position: absolute;
-  //   content: '';
-  //   width: 2em;
-  //   height: .6em;
-  //   right: 0;
-  //   bottom: 0;
-  //   background: $secondary-color;
-  //   z-index: -1;
-  // }
 }

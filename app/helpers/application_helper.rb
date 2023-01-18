@@ -1,7 +1,7 @@
 module ApplicationHelper
   def active?(link_path)
     if current_page?(link_path)
-      "focus-tab"
+      " focus-tab"
     else
       ""
     end
