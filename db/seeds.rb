@@ -13,8 +13,9 @@ require "open-uri"
 # 1. Delete all Data from Database
 puts "Cleaning Database! 🧹"
 
-Place.destroy_all
+Game.destroy_all
 Night.destroy_all
+Place.destroy_all
 BitchBookEntry.destroy_all
 User.destroy_all
 sleep(2)
@@ -34,9 +35,7 @@ User.create!(
   sign: "Virgo ♍️",
   favorite_drink: "Whiskey 🥃",
   lucky_number: 2,
-  bio: "Hello, I'm Emma and I am the Founder of NBJB",
-  wins: 6,
-  losses: 4
+  bio: "Hello, I'm Emma and I am the Founder of NBJB"
 )
 
 User.create!(
@@ -52,9 +51,7 @@ User.create!(
   sign: "Gemini ♊️",
   favorite_drink: "Espresso Martini 🍸",
   lucky_number: 6,
-  bio: "Hello, I'm Marlene and I am the Founder of NBJB",
-  wins: 6,
-  losses: 4
+  bio: "Hello, I'm Marlene and I am the Founder of NBJB"
 )
 
 User.create!(
@@ -70,9 +67,7 @@ User.create!(
   sign: "Taurus ♉️",
   favorite_drink: "Wine 🍷",
   lucky_number: 7,
-  bio: "Hello, I'm Florence and this is my amazing Bio",
-  wins: 6,
-  losses: 4
+  bio: "Hello, I'm Florence and this is my amazing Bio"
 )
 
 User.create!(
@@ -88,9 +83,7 @@ User.create!(
   sign: "Gemini♊︎",
   favorite_drink: "Lemonade🍋",
   lucky_number: 42,
-  bio: "Hello, I'm Ida and this is my amazing Bio",
-  wins: 10,
-  losses: 2
+  bio: "Hello, I'm Ida and this is my amazing Bio"
 )
 
 # 3. Create new Places
@@ -156,6 +149,18 @@ Night.create!(
   user: User.first,
   place: Place.first
 )
+
+emmas_game = Game.create!(
+  start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
+  end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
+  place: Place.first,
+  night: Night.first
+)
+
+# For each user in the db there needs to be one player belonging to the game/user
+User.all.each do |user|
+  Player.create!(user:, game: emmas_game)
+end
 
 # 5. Create new Bitch Book Entries
 BitchBookEntry.create!(

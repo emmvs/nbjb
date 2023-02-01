@@ -9,7 +9,5 @@ class AddNameToUsers < ActiveRecord::Migration[6.1]
     add_column :users, :favorite_drink, :string
     add_column :users, :lucky_number, :integer
     add_column :users, :bio, :text
-    add_column :users, :wins, :integer
-    add_column :users, :losses, :integer
   end
 end

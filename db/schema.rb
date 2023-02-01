@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_31_204628) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_01_170240) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,16 +28,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_204628) do
   create_table "games", force: :cascade do |t|
     t.datetime "start_time", precision: nil
     t.datetime "end_time", precision: nil
-    t.string "winner"
-    t.string "looser"
-    t.bigint "user_id", null: false
     t.bigint "night_id", null: false
     t.bigint "place_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["night_id"], name: "index_games_on_night_id"
     t.index ["place_id"], name: "index_games_on_place_id"
-    t.index ["user_id"], name: "index_games_on_user_id"
   end
 
   create_table "nights", force: :cascade do |t|
@@ -66,6 +62,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_204628) do
     t.index ["user_id"], name: "index_places_on_user_id"
   end
 
+  create_table "players", force: :cascade do |t|
+    t.boolean "winner", default: false
+    t.bigint "user_id", null: false
+    t.bigint "game_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_players_on_game_id"
+    t.index ["user_id"], name: "index_players_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -83,8 +89,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_204628) do
     t.string "favorite_drink"
     t.integer "lucky_number"
     t.text "bio"
-    t.integer "wins"
-    t.integer "losses"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -92,8 +96,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_31_204628) do
   add_foreign_key "bitch_book_entries", "users"
   add_foreign_key "games", "nights"
   add_foreign_key "games", "places"
-  add_foreign_key "games", "users"
   add_foreign_key "nights", "places"
   add_foreign_key "nights", "users"
   add_foreign_key "places", "users"
+  add_foreign_key "players", "games"
+  add_foreign_key "players", "users"
 end
