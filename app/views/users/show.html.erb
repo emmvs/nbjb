@@ -14,8 +14,8 @@
         <div><p class="font-gamma">Sign: <%= @user.sign %>
         <div><p class="font-gamma">Favorite Drink: <%= @user.favorite_drink %>
         <div><p class="font-gamma">Lucky Number: <%= @user.lucky_number %>
-        <div><p class="font-gamma">Wins: <%= @user.wins %>
-        <div><p class="font-gamma">Losses: <%= @user.losses %>
+        <div><p class="font-gamma">Wins: <%= Player.where(user: current_user, winner: true).length %>
+        <div><p class="font-gamma">Losses: <%= Player.where(user: current_user, winner: false).length %>
         <div class="item-btn btn font-gamma"><%= link_to 'All Bitches', users_path(@user) %></div>
       </ol>
     </div>

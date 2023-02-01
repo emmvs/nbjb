@@ -13,6 +13,7 @@ require "open-uri"
 # 1. Delete all Data from Database
 puts "Cleaning Database! 🧹"
 
+Player.destroy_all
 Game.destroy_all
 Night.destroy_all
 Place.destroy_all
@@ -110,7 +111,7 @@ Place.create!(
 )
 
 # 4. Create new Nights 🌌
-Night.create!(
+first_night = Night.create!(
   title: "First NB-JB Game Ever! 🎱",
   start_time: Time.new(2020, 5, 4, 15, 0, 0, '+02:00'),
   end_time: Time.new(2020, 5, 4, 15, 30, 0, '+02:00'),
@@ -126,7 +127,7 @@ Night.create!(
   place: Place.first
 )
 
-Night.create!(
+emmas_night = Night.create!(
   title: "Emma's Birthday Billard Night",
   start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
   end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
@@ -134,16 +135,16 @@ Night.create!(
   place: Place.first
 )
 
-Night.create!(
-  title: "Florence's Birthday Billard Night",
+idas_night = Night.create!(
+  title: "Ida's Birthday Billard Night",
   start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
   end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
   user: User.first,
   place: Place.first
 )
 
-Night.create!(
-  title: "Ida's Birthday Billard Night",
+florences_night = Night.create!(
+  title: "Florence's Birthday Billard Night",
   start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
   end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
   user: User.first,
@@ -154,12 +155,36 @@ emmas_game = Game.create!(
   start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
   end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
   place: Place.first,
-  night: Night.first
+  night: first_night
 )
 
 # For each user in the db there needs to be one player belonging to the game/user
 User.all.each do |user|
   Player.create!(user:, game: emmas_game)
+end
+
+idas_game = Game.create!(
+  start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
+  end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
+  place: Place.first,
+  night: first_night
+)
+
+# For each user in the db there needs to be one player belonging to the game/user
+User.all.each do |user|
+  Player.create!(user:, game: idas_game)
+end
+
+flos_game = Game.create!(
+  start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
+  end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
+  place: Place.first,
+  night: first_night
+)
+
+# For each user in the db there needs to be one player belonging to the game/user
+User.all.each do |user|
+  Player.create!(user:, game: flos_game)
 end
 
 # 5. Create new Bitch Book Entries
