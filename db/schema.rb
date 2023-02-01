@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_20_154113) do
-
+ActiveRecord::Schema[7.0].define(version: 2023_01_31_204628) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,21 +20,21 @@ ActiveRecord::Schema.define(version: 2022_05_20_154113) do
     t.text "text"
     t.integer "rating"
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_bitch_book_entries_on_user_id"
   end
 
   create_table "games", force: :cascade do |t|
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.datetime "start_time", precision: nil
+    t.datetime "end_time", precision: nil
     t.string "winner"
     t.string "looser"
     t.bigint "user_id", null: false
     t.bigint "night_id", null: false
     t.bigint "place_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["night_id"], name: "index_games_on_night_id"
     t.index ["place_id"], name: "index_games_on_place_id"
     t.index ["user_id"], name: "index_games_on_user_id"
@@ -43,12 +42,12 @@ ActiveRecord::Schema.define(version: 2022_05_20_154113) do
 
   create_table "nights", force: :cascade do |t|
     t.string "title"
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.datetime "start_time", precision: nil
+    t.datetime "end_time", precision: nil
     t.bigint "user_id", null: false
     t.bigint "place_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["place_id"], name: "index_nights_on_place_id"
     t.index ["user_id"], name: "index_nights_on_user_id"
   end
@@ -62,8 +61,8 @@ ActiveRecord::Schema.define(version: 2022_05_20_154113) do
     t.integer "bathroom_rating"
     t.integer "beer_price"
     t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_places_on_user_id"
   end
 
@@ -71,10 +70,10 @@ ActiveRecord::Schema.define(version: 2022_05_20_154113) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "reset_password_sent_at", precision: nil
+    t.datetime "remember_created_at", precision: nil
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
     t.integer "role", default: 0
