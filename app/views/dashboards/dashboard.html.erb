@@ -60,7 +60,7 @@
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2"></div>
-              <h3 class="font-gamma"> You won : <%= current_user.wins %> times!</h3>
+              <h3 class="font-gamma"> You won: <%= Player.where(user: current_user, winner: true).length %> times!</h3>
               <a href="#" class="btn btn-primary">Last Night 🍸</a>
             </div>
           </div>
@@ -72,7 +72,7 @@
           <div class="card-body">
             <div class="row no-gutters align-items-center">
               <div class="col mr-2"></div>
-              <h3 class="font-gamma"> You lost : <%= current_user.losses %> times! 🎱 </h3>
+              <h3 class="font-gamma"> You lost: <%= Player.where(user: current_user, winner: false).length %> times! 🎱 </h3>
             </div>
           </div>
         </div>

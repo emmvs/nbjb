@@ -13,8 +13,10 @@ require "open-uri"
 # 1. Delete all Data from Database
 puts "Cleaning Database! 🧹"
 
-Place.destroy_all
+Player.destroy_all
+Game.destroy_all
 Night.destroy_all
+Place.destroy_all
 BitchBookEntry.destroy_all
 User.destroy_all
 sleep(2)
@@ -34,9 +36,7 @@ User.create!(
   sign: "Virgo ♍️",
   favorite_drink: "Whiskey 🥃",
   lucky_number: 2,
-  bio: "Hello, I'm Emma and I am the Founder of NBJB",
-  wins: 6,
-  losses: 4
+  bio: "Hello, I'm Emma and I am the Founder of NBJB"
 )
 
 User.create!(
@@ -52,9 +52,7 @@ User.create!(
   sign: "Gemini ♊️",
   favorite_drink: "Espresso Martini 🍸",
   lucky_number: 6,
-  bio: "Hello, I'm Marlene and I am the Founder of NBJB",
-  wins: 6,
-  losses: 4
+  bio: "Hello, I'm Marlene and I am the Founder of NBJB"
 )
 
 User.create!(
@@ -70,9 +68,7 @@ User.create!(
   sign: "Taurus ♉️",
   favorite_drink: "Wine 🍷",
   lucky_number: 7,
-  bio: "Hello, I'm Florence and this is my amazing Bio",
-  wins: 6,
-  losses: 4
+  bio: "Hello, I'm Florence and this is my amazing Bio"
 )
 
 User.create!(
@@ -88,9 +84,7 @@ User.create!(
   sign: "Gemini♊︎",
   favorite_drink: "Lemonade🍋",
   lucky_number: 42,
-  bio: "Hello, I'm Ida and this is my amazing Bio",
-  wins: 10,
-  losses: 2
+  bio: "Hello, I'm Ida and this is my amazing Bio"
 )
 
 # 3. Create new Places
@@ -117,7 +111,7 @@ Place.create!(
 )
 
 # 4. Create new Nights 🌌
-Night.create!(
+first_night = Night.create!(
   title: "First NB-JB Game Ever! 🎱",
   start_time: Time.new(2020, 5, 4, 15, 0, 0, '+02:00'),
   end_time: Time.new(2020, 5, 4, 15, 30, 0, '+02:00'),
@@ -133,7 +127,7 @@ Night.create!(
   place: Place.first
 )
 
-Night.create!(
+emmas_night = Night.create!(
   title: "Emma's Birthday Billard Night",
   start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
   end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
@@ -141,7 +135,15 @@ Night.create!(
   place: Place.first
 )
 
-Night.create!(
+idas_night = Night.create!(
+  title: "Ida's Birthday Billard Night",
+  start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
+  end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
+  user: User.first,
+  place: Place.first
+)
+
+florences_night = Night.create!(
   title: "Florence's Birthday Billard Night",
   start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
   end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
@@ -149,13 +151,41 @@ Night.create!(
   place: Place.first
 )
 
-Night.create!(
-  title: "Ida's Birthday Billard Night",
+emmas_game = Game.create!(
   start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
   end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
-  user: User.first,
-  place: Place.first
+  place: Place.first,
+  night: first_night
 )
+
+# For each user in the db there needs to be one player belonging to the game/user
+User.all.each do |user|
+  Player.create!(user:, game: emmas_game)
+end
+
+idas_game = Game.create!(
+  start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
+  end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
+  place: Place.first,
+  night: first_night
+)
+
+# For each user in the db there needs to be one player belonging to the game/user
+User.all.each do |user|
+  Player.create!(user:, game: idas_game)
+end
+
+flos_game = Game.create!(
+  start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
+  end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
+  place: Place.first,
+  night: first_night
+)
+
+# For each user in the db there needs to be one player belonging to the game/user
+User.all.each do |user|
+  Player.create!(user:, game: flos_game)
+end
 
 # 5. Create new Bitch Book Entries
 BitchBookEntry.create!(
