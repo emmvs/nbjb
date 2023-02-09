@@ -1,9 +1,7 @@
 # app/controllers/places_controller.rb
 
 class PlacesController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_place, only: %i[show edit update destroy]
-  # before_action :place_check, only: [:show, :edit, :update, :destroy]
 
   def index
     if params[:query].present?
@@ -21,7 +19,6 @@ class PlacesController < ApplicationController
   def create
     @place = Place.new(place_params)
     @place.user = current_user
-    # authorize @place
     if @place.save
       redirect_to @place
     else
@@ -47,11 +44,6 @@ class PlacesController < ApplicationController
   end
 
   private
-
-  # def place_check
-  #   @place = Place.find(params[:id])
-  #   authorize @place
-  # end
 
   def set_place
     @place = Place.find(params[:id])
