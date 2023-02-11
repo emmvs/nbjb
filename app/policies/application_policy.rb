@@ -3,7 +3,7 @@
 class ApplicationPolicy
   attr_reader :user, :record
 
-  #              current_user in Devise
+  #               👇 current_user in Devise
   def initialize(user, record)
     @user = user
     @record = record
