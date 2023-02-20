@@ -2,9 +2,6 @@
 
 class DashboardsController < ApplicationController
   def dashboard
-  end
-
-  def show
     authorize @dashboard # Pundit
   end
 end

@@ -5,6 +5,7 @@ class ApplicationPolicy
 
   #               👇 current_user in Devise
   def initialize(user, record)
+    #                     👆 the individual thing
     @user = user
     @record = record
   end

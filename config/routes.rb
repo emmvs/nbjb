@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   get 'dashboards/dashboard'
   devise_for :users
   root to: 'pages#home'
+
+  get "about", to: "pages#about"
+  get "contact", to: "pages#contact"
+
   resources :users
   resources :places
   resources :nights

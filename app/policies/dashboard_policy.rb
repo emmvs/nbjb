@@ -6,7 +6,7 @@ class DashboardPolicy < ApplicationPolicy
     # end
   end
 
-  def show?
+  def dashboard?
     true
   end
 end
