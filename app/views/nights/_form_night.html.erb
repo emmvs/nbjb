@@ -6,18 +6,14 @@
         <h3 class="font-delta">Plan your Night</h3>
         <%= simple_form_for(@night) do |f| %>
           <%= f.input :title, placeholder: 'Whats the name of your night?🎉' %>
-          <%= f.input :place, placeholder: 'What place are you playing at?🎱' %>
+          <%= f.association :place, placeholder: 'What place are you playing at?🎱' %>
           <%= f.input :start_time, placeholder: 'When did your night start?🚀' %>
           <%= f.input :end_time, placeholder: 'When did your night end?😴' %>
           <%# <label for="purpose">Your camel's purpose:&nbsp;&nbsp;&nbsp;</label> %>
           <%# <%= f.select :purpose, ["Movie Production", "Desert Trip", "Race", "Photoshoot", "Birthday Party", "Fair", "Present", "Wedding"] %>
           <%# <%= f.input :description, placeholder: 'Let us know more about your beloved camel' %>
           <%# <%= f.input :photo, label: "Choose the sassy picture for your camel"  %>
-          <% if f.object.new_record? %>
-            <%= f.submit "Create Night", class: "btn btn-secondary" %>
-          <% else %>
-            <%= f.submit "Edit Night", class: "btn btn-secondary" %>
-          <% end %>
+          <%= f.submit (f.object.new_record? ? "Create Night" : "Edit Night"), class: "btn btn-secondary" %>
           <%= link_to "Cancel", :back, {:class=>"form--link"} %>
         <% end %>
       </div>

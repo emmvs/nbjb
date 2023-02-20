@@ -22,6 +22,7 @@ class NightsController < ApplicationController
 
   def create
     @night = Night.new(night_params)
+    @night.user = current_user
     if @night.save!
       redirect_to nights_path
     else
@@ -52,6 +53,6 @@ class NightsController < ApplicationController
   end
 
   def night_params
-    params.require(:night).permit(:start_time, :end_time, :user, :place, :title)
+    params.require(:night).permit(:start_time, :end_time, :user, :place_id, :title)
   end
 end
