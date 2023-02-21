@@ -69,3 +69,5 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem "sprockets-rails"
+
+gem "simple_calendar", "~> 2.4"

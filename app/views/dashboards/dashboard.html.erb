@@ -1,24 +1,38 @@
 <!-- app/views/dashboards/overview.html.erb -->
 
 <%# TODO ************** %>
-<%# Make The Dashboard editable/sortable %>
-<%# Depending on Role you have different features here%>
+<%# TODO: Make The Dashboard editable/sortable %>
+<%# TODO: Create Calender View %>
+<%# TODO: Depending on Role you have different features here %>
 <%# > Feature Add Nights, Role Moderator, Admin %>
 <%# > Feature Add Places, Role User, Moderator or Admin %>
 
-<%# ************** DASHBOARD ************** %>
+<%# ********** DASHBOARD ********** %>
 <div class="container-dashboard m-2 font-alpha">
   <div class="item-hello">
     <h2 class="font-beta">Hi, <%= current_user.first_name %>!</h2>
     <h2 class="item-welcome font-gamma">and welcome to your personal Dashboard</h2>
   </div>
   <br>
-  <div>
-    <h3 class="m-2 col-xl-4 card font-gamma">"<%= current_user.bio %>"</h3>
+
+  <%# ********** Calendar ********** %>
+  <div class="container font-gamma">
+    <%= month_calendar(events: @nights) do |date, nights| %>
+      <div class="day">
+        <%= date.day %>
+      </div>
+      <% nights.each do |night| %>
+        <div class="card-header">
+          <div class="card-title">
+            <%= link_to night.title, night_path(night)  %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
   <br>
 
-  <%# ****** Sortable ****** %>
+  <%# ********** Sortable ********** %>
   <div data-controller="sortable" id="results" class="sortable-container">
     <!-- Content Row -->
       <div class="col-xl-2 col-md-4 mb-4 item-lucky-number">
