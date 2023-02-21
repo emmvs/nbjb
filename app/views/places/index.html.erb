@@ -6,10 +6,10 @@
   <h1 class="font-gamma">Here is a list of all Places we played at:</h1>
   <div class="container">
     <div class="grid">
+      <div class="row justify-content-center">
       <% @places.each do |place| %>
-      <div class="row">
-        <div class ="col-sm-6">
-          <div class="card bg-light mb-3 mt-3 border-left-primary shadow h-100 py-2" style="width: 18rem;">
+        <div class ="col-8 col-sm-6 col-md-4 mb-3">
+          <div class="card bg-light mb-3 mt-3 border-left-primary shadow h-100 py-2">
             <img class="card-img-top" src="https://images.unsplash.com/photo-1544281153-6603be88b354?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmlsbGlhcmRzfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="Billard card image">
               <div class="card-body">
                 <div class="card-text list-name mb-1 text-xs font-gamma"><%= place.name %></div>
@@ -19,11 +19,11 @@
               </div>
           </div>
         </div>
-      </div>
       <% end %>
+      </div>
     </div>
   </div>
-  
+
   <%# ************** Add a new Place ************** %>
   <div class="item-btn"><%= link_to 'Add new Place', new_place_path(@place) %></div>
 </div>

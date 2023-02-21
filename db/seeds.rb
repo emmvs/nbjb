@@ -87,10 +87,53 @@ User.create!(
   bio: "Hello, I'm Ida and this is my amazing Bio"
 )
 
+User.create!(
+  email: "santiana@test.com",
+  password: "123456",
+  # language: 2,
+  first_name: "Santiana",
+  last_name: "Sanchez",
+  # phone_number: "+14154259973",
+  # birthday: 19990507120000,
+  # first_game: 20210507120000,
+  # role: 1,
+  sign: "Gemini♊︎",
+  favorite_drink: "Sours🍋",
+  lucky_number: 23,
+  bio: "I am Santiana from Venezuela and I hate Mexikaner because tehy are racist ❌ and I love dark humor 🦙"
+)
+
+User.create!(
+  email: "nadja@test.com",
+  password: "123456",
+  # language: 2,
+  first_name: "Nadja Josefin",
+  last_name: "Rünzel",
+  # phone_number: "+14154259973",
+  # birthday: 19990507120000,
+  # first_game: 20210507120000,
+  # role: 1,
+  sign: "Virgo♍️",
+  favorite_drink: "Mexikaner♥️",
+  lucky_number: 2,
+  bio: "I am Nadja and I hate Santiana"
+)
+
 # 3. Create new Places
 Place.create!(
+  name: "Bechereck",
+  address: "Okerstraße 35, 12049 Berlin",
+  asshole_score: 4,
+  barkeeper_rating: 8,
+  dating_rating: 3,
+  bathroom_rating: 4,
+  beer_price: 3,
+  user: User.last
+)
+
+Place.create!(
   name: "Bierbaum 3",
-  address: "Neukölln",
+  address: "Schillerpromenade 31, 12049 Berlin",
   asshole_score: 2,
   barkeeper_rating: 8,
   dating_rating: 1,
@@ -100,13 +143,24 @@ Place.create!(
 )
 
 Place.create!(
-  name: "Bechereck",
-  address: "Neukölln",
-  asshole_score: 4,
+  name: "Zum Elefanten",
+  address: "Oranienstraße 12, 10999 Berlin",
+  asshole_score: 2,
   barkeeper_rating: 8,
-  dating_rating: 3,
+  dating_rating: 1,
   bathroom_rating: 4,
   beer_price: 3,
+  user: User.first
+)
+
+Place.create!(
+  name: "Billard House",
+  address: "Rudolfstraße 1-8, 10245 Berlin",
+  asshole_score: 2,
+  barkeeper_rating: 8,
+  dating_rating: 4,
+  bathroom_rating: 6,
+  beer_price: 4,
   user: User.last
 )
 
