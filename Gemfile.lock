@@ -223,6 +223,8 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     semantic_range (3.0.0)
+    simple_calendar (2.4.3)
+      rails (>= 3.0)
     spring (4.1.1)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
@@ -287,6 +289,7 @@ DEPENDENCIES
   redis (~> 4.0)
   sass-rails (>= 6)
   selenium-webdriver
+  simple_calendar (~> 2.4)
   simple_form!
   spring
   sprockets-rails
