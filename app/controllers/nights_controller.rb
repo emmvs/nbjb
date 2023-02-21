@@ -18,6 +18,8 @@ class NightsController < ApplicationController
 
   def new
     @night = Night.new
+    authorize @night
+    # NightPolicy.new(current_user, @night)
   end
 
   def create

@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :games
   has_many :bitch_book_entries
   has_many :places
+  enum role: { player: 0, manager: 1, admin: 2 }
 end

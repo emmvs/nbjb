@@ -1,4 +1,4 @@
-class DashboardPolicy < ApplicationPolicy
+class NightPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     # def resolve
@@ -6,7 +6,7 @@ class DashboardPolicy < ApplicationPolicy
     # end
   end
 
-  def dashboard?
-    true
+  def new?
+    user.admin?
   end
 end
