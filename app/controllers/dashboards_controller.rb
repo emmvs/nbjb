@@ -2,6 +2,7 @@
 
 class DashboardsController < ApplicationController
   skip_after_action :verify_authorized, only: :dashboard
+  # ! Very dangerous comment AHHHH 😱
 
   def dashboard
     @nights = Night.where(
