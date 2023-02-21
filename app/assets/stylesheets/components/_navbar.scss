@@ -1,15 +1,19 @@
 .navbar {
   justify-content: space-between;
   background: white;
+
+  .navbar-brand {
+    flex-grow: 1;
+
+    img {
+      width: 3rem;
+      margin-right: 2rem;
+    }
+  }
 }
 
 .navbar .navbar-collapse {
   flex-grow: 0;
-}
-
-.navbar .navbar-brand img {
-  width: 3rem;
-  margin-right: 2rem;
 }
 
 .dropdown-toggle {

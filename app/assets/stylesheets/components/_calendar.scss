@@ -1,0 +1,37 @@
+.simple-calendar {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+
+  .day {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+    .simple-calendar .wday-0 .wday-6 {
+    color: #ff2e63 !important;
+  }
+
+  .w-day {
+    color: #333;
+  }
+
+
+  // .today {}
+
+  // .past {}
+
+  // .future {}
+
+  // .start-date {}
+
+  // .prev-month {}
+
+  // .next-month {}
+
+  // .current-month {}
+
+  // .has-events {}
+}
