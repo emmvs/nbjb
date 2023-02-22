@@ -4,8 +4,17 @@
 
   <%# ************** Display Places ************** %>
   <h1 class="font-gamma">Here is a list of all Places we played at:</h1>
+
+  <%# ************** Map ************** %>
+  <div data-controller="map"
+       id="map"
+       style='width: 100%; height: 300px;'>
+  </div>
+
+
+
+
   <div class="container">
-    <div class="grid">
       <div class="row justify-content-center">
       <% @places.each do |place| %>
         <div class ="col-8 col-sm-6 col-md-4 mb-3">
@@ -21,7 +30,6 @@
         </div>
       <% end %>
       </div>
-    </div>
   </div>
 
   <%# ************** Add a new Place ************** %>
