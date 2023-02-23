@@ -20,4 +20,3 @@ import "bootstrap"
 document.addEventListener('turbolinks:load', () => {
 
 });
-
