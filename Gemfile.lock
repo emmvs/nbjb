@@ -280,7 +280,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   font-awesome-sass
-  jbuilder (~> 2.7)
+  jbuilder
   listen (~> 3.3)
   pg (~> 1.1)
   pry-byebug
@@ -291,6 +291,7 @@ DEPENDENCIES
   rails (~> 7.0.0)
   redis (~> 4.0)
   sass-rails (>= 6)
+  sassc-rails
   selenium-webdriver
   simple_calendar (~> 2.4)
   simple_form!
