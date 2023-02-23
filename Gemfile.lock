@@ -82,6 +82,10 @@ GEM
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
+    bootstrap (5.2.3)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 2.11.6, < 3)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     byebug (11.1.3)
     capybara (3.38.0)
@@ -112,6 +116,7 @@ GEM
     ffi (1.15.5)
     font-awesome-sass (6.2.1)
       sassc (~> 2.0)
+    geocoder (1.8.1)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -152,6 +157,7 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.4.5)
+    popper_js (2.11.6)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -235,6 +241,8 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    stimulus-rails (1.2.1)
+      railties (>= 6.0.0)
     thor (1.2.1)
     tilt (2.0.11)
     timeout (0.3.1)
@@ -275,12 +283,18 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails (= 10.2.5)
   bootsnap (>= 1.4.4)
+  bootstrap (~> 5.2.2)
   byebug
   capybara (>= 3.26)
   devise
   dotenv-rails
   font-awesome-sass
+<<<<<<< HEAD
   jbuilder
+=======
+  geocoder
+  jbuilder (~> 2.7)
+>>>>>>> 63a9f443d54069354b5d456ee7e1437349e415cd
   listen (~> 3.3)
   pg (~> 1.1)
   pry-byebug
@@ -297,6 +311,7 @@ DEPENDENCIES
   simple_form!
   spring
   sprockets-rails
+  stimulus-rails
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)

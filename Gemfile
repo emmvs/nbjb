@@ -1,15 +1,21 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
+# Ruby
+ruby "3.1.2"
 # gem 'rails', '~> 6.1.4', '>= 6.1.4.6'
 gem "rails", "~> 7.0.0"
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
+# Devise
+gem 'devise'
 # Pundit
 gem "pundit"
+# Stimulus
+gem 'stimulus-rails'
+
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -23,6 +29,12 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
+# Geocoder
+gem "geocoder"
+# Calender
+gem "simple_calendar", "~> 2.4"
+# Bootstrap
+gem 'bootstrap', '~> 5.2.2'
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -32,8 +44,6 @@ gem 'redis', '~> 4.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
-
-gem 'devise'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
@@ -70,5 +80,3 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem "sprockets-rails"
-
-gem "simple_calendar", "~> 2.4"
