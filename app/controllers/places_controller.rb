@@ -10,6 +10,13 @@ class PlacesController < ApplicationController
     else
       @places = Place.all
     end
+    # The `geocoded` scope filters only places with coordinates
+    @markers = @places.geocoded.map do |place| # ⬅️ Geocoding
+      {
+        lat: place.latitude,
+        lng: place.longitude
+      }
+    end
   end
 
   def new
