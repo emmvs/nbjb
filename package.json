@@ -14,10 +14,9 @@
     "stimulus": "^3.2.1",
     "turbolinks": "^5.2.0",
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "3.11.2"
   },
   "version": "0.1.0",
-  "devDependencies": {
-    "webpack-dev-server": "^3"
-  }
+  "devDependencies": {}
 }
