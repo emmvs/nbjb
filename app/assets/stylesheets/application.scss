@@ -1,5 +1,4 @@
 // app/assets/stylesheets/application.scss
-@import '../../../node_modules/bootstrap/scss/bootstrap';
 
 // Graphical Variables & Fonts
 @import "config/fonts";
@@ -16,6 +15,7 @@
 }
 
 // External Libraries
+@import '../../../node_modules/bootstrap/scss/bootstrap';
 @import "font-awesome";
 @import "simple_calendar";
 
