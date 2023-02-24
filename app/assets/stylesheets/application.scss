@@ -7,17 +7,16 @@
 
 @font-face {
   font-family: "Space Grotesk";
-  src: url(/app/assets/fonts/Space_Grotesk/);
+  src: url("/app/assets/fonts/Space_Grotesk/");
 }
 
 @font-face {
   font-family: "1up";
-  src: url(/app/assets/fonts/1up/);
+  src: url("/app/assets/fonts/1up/");
 }
 
 // External Libraries
-@import '../../../node_modules/bootstrap/scss/bootstrap';
-// @import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 @import "font-awesome";
 @import "simple_calendar";
 
