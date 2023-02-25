@@ -1,12 +1,19 @@
 // app/javascript/controllers/application.js
+// Entry point for the build script in your package.json
+import "@hotwired/turbo-rails"
+import "./controllers"
+import "bootstrap"
 
-import "controllers"
-import { Application } from "@hotwired/stimulus"
 
-const application = Application.start()
+// Old Code
 
-// Configure Stimulus development experience
-application.debug = false
-window.Stimulus   = application
+// import "controllers"
+// import { Application } from "@hotwired/stimulus"
 
-export { application }
+// const application = Application.start()
+
+// // Configure Stimulus development experience
+// application.debug = false
+// window.Stimulus   = application
+
+// export { application }
