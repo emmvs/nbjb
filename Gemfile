@@ -34,7 +34,7 @@ gem "geocoder"
 # Calender
 gem "simple_calendar", "~> 2.4"
 # Bootstrap
-gem 'bootstrap', '~> 5.2.2'
+# gem 'bootstrap', '~> 5.2.2'
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
