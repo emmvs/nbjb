@@ -1,24 +1,13 @@
 {
-  "name": "my-webpack-project",
-  "private": true,
+  "name": "app",
+  "private": "true",
   "dependencies": {
     "@hotwired/stimulus": "^3.2.1",
+    "@hotwired/turbo-rails": "^7.2.5",
     "@popperjs/core": "^2.11.6",
-    "@rails/actioncable": "^7.0.4-2",
-    "@rails/activestorage": "^7.0.4-2",
-    "@rails/ujs": "^7.0.4-2",
-    "@rails/webpacker": "5.4.4",
-    "jquery": "^3.6.3",
-    "popper.js": "^1.16.1",
-    "sortablejs": "^1.15.0",
-    "stimulus": "^3.2.1",
-    "turbolinks": "^5.2.0",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
-  },
-  "version": "1.0.0",
-  "devDependencies": {
-    "webpack-dev-server": "^3"
+    "bootstrap": "^5.2.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "scripts": {
     "build": "webpack --config webpack.config.js"
