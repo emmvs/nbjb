@@ -10,7 +10,9 @@
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
+    "build:css": "yarn bootstrap-icons:copy-fonts && sass ./app/assets/stylesheets/application.bootstrap.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules",
+    "bootstrap-icons:copy-fonts": "mkdir -p app/assets/fonts && cp -r node_modules/bootstrap-icons/font/fonts/ app/assets/fonts/"
   },
   "devDependencies": {
     "webpack-dev-server": "^3"
