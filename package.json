@@ -6,15 +6,17 @@
     "@hotwired/turbo-rails": "^7.2.5",
     "@popperjs/core": "^2.11.6",
     "@rails/webpacker": "5.4.4",
-    "webpack": "^4.46.0",
+    "sortablejs": "^1.15.0",
+    "bootstrap": "^5.2.3",
+    "stimulus": "^3.2.1",
+    "webpack": "^5.75.0",
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
-    "build:css": "yarn bootstrap-icons:copy-fonts && sass ./app/assets/stylesheets/application.bootstrap.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules",
-    "bootstrap-icons:copy-fonts": "mkdir -p app/assets/fonts && cp -r node_modules/bootstrap-icons/font/fonts/ app/assets/fonts/"
+    "build": "webpack --mode production"
   },
   "devDependencies": {
-    "webpack-dev-server": "^3"
+    "webpack-dev-server": "^3",
+    "controllers": "^1"
   }
 }
