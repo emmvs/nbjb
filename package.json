@@ -5,7 +5,6 @@
     "@hotwired/stimulus": "^3.2.1",
     "@hotwired/turbo-rails": "^7.2.5",
     "@popperjs/core": "^2.11.6",
-    "@rails/webpacker": "5.4.4",
     "sortablejs": "^1.15.0",
     "bootstrap": "^5.2.3",
     "stimulus": "^3.2.1",
@@ -14,8 +13,5 @@
   },
   "scripts": {
     "build": "webpack --mode production"
-  },
-  "devDependencies": {
-    "webpack-dev-server": "^3"
   }
 }
