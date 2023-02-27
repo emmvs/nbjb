@@ -1,7 +1,7 @@
 
 # NB-JB 🎱
 
-No Balls - Just Bitches is a women's billiard club about breaking stereotypes and having a good time. With all-girl players and a supportive atmosphere, this club proves that strength, strategy, and sisterhood are the winning combination.
+NB-JB is a women's billiard club about breaking stereotypes and having a good time. With all-girl players and a supportive atmosphere, this club proves that strength, strategy, and sisterhood are the winning combination.
 
 
 ## Documentation
