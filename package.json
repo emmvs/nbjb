@@ -16,7 +16,6 @@
     "build": "webpack --mode production"
   },
   "devDependencies": {
-    "webpack-dev-server": "^3",
-    "controllers": "^1"
+    "webpack-dev-server": "^3"
   }
 }
