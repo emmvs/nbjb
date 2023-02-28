@@ -1,7 +1,5 @@
 # app/controllers/nights_controller.rb
 
-# require 'pry-byebug'
-
 class NightsController < ApplicationController
   before_action :set_night, only: %i[show edit update destroy]
 
@@ -52,6 +50,7 @@ class NightsController < ApplicationController
 
   def set_night
     @night = Night.find(params[:id])
+    authorize @night
   end
 
   def night_params
