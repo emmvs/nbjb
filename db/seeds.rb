@@ -23,7 +23,7 @@ sleep(2)
 puts "Database is clean! 🧼"
 
 # 2. Create new Users (aka Bitches)
-User.create!(
+emma = User.create!(
   email: "emma@test.com",
   password: "123456",
   # language: 1,
@@ -39,7 +39,7 @@ User.create!(
   bio: "Hello, I'm Emma and I am the Founder of NBJB"
 )
 
-User.create!(
+marlene = User.create!(
   email: "marlene@test.com",
   password: "123456",
   # language: 1,
@@ -55,7 +55,7 @@ User.create!(
   bio: "Hello, I'm Marlene and I am the Founder of NBJB"
 )
 
-User.create!(
+florence = User.create!(
   email: "florence@test.com",
   password: "123456",
   # language: 2,
@@ -71,7 +71,7 @@ User.create!(
   bio: "Hello, I'm Florence and this is my amazing Bio"
 )
 
-User.create!(
+ida = User.create!(
   email: "ida@test.com",
   password: "123456",
   # language: 2,
@@ -87,7 +87,7 @@ User.create!(
   bio: "Hello, I'm Ida and this is my amazing Bio"
 )
 
-User.create!(
+santiana = User.create!(
   email: "santiana@test.com",
   password: "123456",
   # language: 2,
@@ -102,7 +102,7 @@ User.create!(
   bio: "I am Santiana from Venezuela and I hate Mexikaner because tehy are racist ❌ and I love dark humor 🦙"
 )
 
-User.create!(
+nadja = User.create!(
   email: "nadja@test.com",
   password: "123456",
   # language: 2,
@@ -126,7 +126,7 @@ Place.create!(
   dating_rating: 3,
   bathroom_rating: 4,
   beer_price: 3,
-  user: User.last
+  user_id: emma.id
 )
 
 Place.create!(
@@ -137,7 +137,7 @@ Place.create!(
   dating_rating: 1,
   bathroom_rating: 4,
   beer_price: 3,
-  user: User.first
+  user_id: emma.id
 )
 
 Place.create!(
@@ -148,10 +148,10 @@ Place.create!(
   dating_rating: 1,
   bathroom_rating: 4,
   beer_price: 3,
-  user: User.first
+  user_id: marlene.id
 )
 
-Place.create!(
+billard_house = Place.create!(
   name: "Billard House",
   address: "Rudolfstraße 1-8, 10245 Berlin",
   asshole_score: 2,
@@ -159,7 +159,7 @@ Place.create!(
   dating_rating: 4,
   bathroom_rating: 6,
   beer_price: 4,
-  user: User.last
+  user_id: nadja.id
 )
 
 # 4. Create new Nights 🌌
@@ -167,7 +167,7 @@ first_night = Night.create!(
   title: "First NB-JB Game Ever! 🎱",
   start_time: Time.new(2020, 5, 4, 15, 0, 0, '+02:00'),
   end_time: Time.new(2020, 5, 4, 15, 30, 0, '+02:00'),
-  user: User.first,
+  user_id: emma.id,
   place: Place.first
 )
 
@@ -175,7 +175,7 @@ Night.create!(
   title: "Marlene's wonderful Billard Night",
   start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
   end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
-  user: User.first,
+  user_id: marlene.id,
   place: Place.first
 )
 
@@ -183,7 +183,7 @@ emmas_night = Night.create!(
   title: "Emma's Birthday Billard Night",
   start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
   end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
-  user: User.first,
+  user_id: emma.id,
   place: Place.first
 )
 
@@ -191,7 +191,7 @@ idas_night = Night.create!(
   title: "Ida's Birthday Billard Night",
   start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
   end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
-  user: User.first,
+  user_id: ida.id,
   place: Place.first
 )
 
@@ -199,15 +199,15 @@ florences_night = Night.create!(
   title: "Florence's Birthday Billard Night",
   start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
   end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
-  user: User.first,
+  user_id: florence.id,
   place: Place.first
 )
 
 emmas_game = Game.create!(
   start_time: Time.new(2022, 6, 8, 20, 0, 0, '+02:00'),
   end_time: Time.new(2022, 6, 8, 22, 30, 0, '+02:00'),
-  place: Place.first,
-  night: first_night
+  place_id: billard_house.id,
+  night_id: first_night.id
 )
 
 # For each user in the db there needs to be one player belonging to the game/user

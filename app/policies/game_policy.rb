@@ -1,4 +1,4 @@
-class UserPolicy < ApplicationPolicy
+class GamePolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve
@@ -7,6 +7,22 @@ class UserPolicy < ApplicationPolicy
   end
 
   def show?
+    true
+  end
+
+  def new?
+    create?
+  end
+
+  def create?
+    true
+  end
+
+  def edit?
+    update?
+  end
+
+  def update?
     true
   end
 end

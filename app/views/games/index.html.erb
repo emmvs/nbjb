@@ -1,9 +1,21 @@
 <!-- app/views/games/index.html.erb -->
 
-<%# TODO ************** %>
-<%# Create Games Display %>
-<%# Depending on Role you have different features here%>
-<%# Feature Add Games, Role Admin, Moderator %>
-
 <%# ************** Display Games ************** %>
 <h1 class="font-beta">Games</h1>
+  <div class="container">
+    <div class="row justify-content-center">
+      <% @games.each do |game| %>
+        <div class ="col-8 col-sm-6 col-md-4">
+          <div class="card card-nbjb bg-light mb-3 mt-3">
+          <img class="card-img-top" src="https://images.unsplash.com/photo-1544281153-6603be88b354?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmlsbGlhcmRzfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="Billard card image">
+            <div class="card-body">
+              <h5 class="card-text mb-1 text-xs font-gamma">This game was at this night: <%= game.night.title %></h5>
+              <h5 class="card-text mb-1 text-xs font-gamma">The game started at: <%= game.start_time %></h5>
+              <h5 class="card-text mb-1 text-xs font-gamma">And ended at: <%= game.end_time %></h5>
+              <p class="card-text card-link mb-1 text-xs"> <%= link_to 'Show Game', game_path(game)%></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>

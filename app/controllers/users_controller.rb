@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     #  @query = params[:query]
     # @users = User.where("name ILIKE ?", "%#{params[:query]}%")
     # else
-    @users = User.all
+    @users = policy_scope(User)
     # end
   end
 

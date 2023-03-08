@@ -1,25 +1,15 @@
 # app/controllers/nights_controller.rb
 
-# require 'pry-byebug'
-
 class NightsController < ApplicationController
   before_action :set_night, only: %i[show edit update destroy]
 
   def index
-    # if params[:query].present?
-    #  @query = params[:query]
-    #  @nights = Night.where("name ILIKE ?", "%#{params[:query]}%")
-    # Preventing SQL Injection and Database error for
-    # unknown characters
-    # else
-    @nights = Night.all
-    # end
+    @nights = policy_scope(Night)
   end
 
   def new
     @night = Night.new
-    authorize @night
-    # NightPolicy.new(current_user, @night)
+    authorize @night # NightPolicy.new(current_user, @night)
   end
 
   def create
@@ -52,6 +42,7 @@ class NightsController < ApplicationController
 
   def set_night
     @night = Night.find(params[:id])
+    authorize @night
   end
 
   def night_params

@@ -10,7 +10,7 @@
           <%= f.input :start_time, placeholder: 'When did your night start?🚀' %>
           <%= f.input :end_time, placeholder: 'When did your night end?😴' %>
           <%# <label for="purpose">Your camel's purpose:&nbsp;&nbsp;&nbsp;</label> %>
-          <%# <%= f.select :purpose, ["Movie Production", "Desert Trip", "Race", "Photoshoot", "Birthday Party", "Fair", "Present", "Wedding"] %>
+          <%# <%= f.select :purpose, ["Bar", "Billard Place", "Other"] %>
           <%# <%= f.input :description, placeholder: 'Let us know more about your beloved camel' %>
           <%# <%= f.input :photo, label: "Choose the sassy picture for your camel"  %>
           <%= f.submit (f.object.new_record? ? "Create Night" : "Edit Night"), class: "btn btn-secondary" %>
