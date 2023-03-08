@@ -1,13 +1,13 @@
 # app/controllers/games_controller.rb
 
 class GamesController < ApplicationController
-  before_action :find_game, only: %i[show edit update destroy]
+  before_action :set_game, only: %i[show edit update destroy]
 
   def index
     if params[:query].present?
       @games = Game.search_by_city(params[:query])
     else
-      @games = Game.all
+      @games = policy_scope(Game)
     end
   end
 
@@ -15,10 +15,12 @@ class GamesController < ApplicationController
 
   def new
     @game = Game.new
+    authorize @game
   end
 
   def create
     @game = Game.new(game_params)
+    authorize @game
     @game.user = current_user
     if @game.save!
       redirect_to game_path(@game)
@@ -46,8 +48,9 @@ class GamesController < ApplicationController
 
   private
 
-  def find_game
+  def set_game
     @game = Game.find(params[:id])
+    authorize @game
   end
 
   def game_params

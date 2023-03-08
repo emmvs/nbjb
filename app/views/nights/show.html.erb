@@ -1,22 +1,22 @@
 <%#app/views/nights/show.html.erb%>
 
-<div class="container nights">
+<h1 class="font-alpha">Your latest night was:</h1>
   <%# ************** Display Specific Night ************** %>
-  <h1 class="font-alpha">Your latest night was:</h1>
-    <div>
-      <div class="container-nights">
-        <div>
-          <div class="list-name font-gamma"><%= @night.title %></div>
-          <div class="list-name font-gamma"><%= @night.place.name %></div>
-          <div class="list-name font-gamma"><%= @night.start_time %></div>
+<div class="container">
+  <p class="list-name font-gamma"><%= @night.title %></p>
+  <p class="list-name font-gamma"><%= @night.place.name %></p>
+  <p class="list-name font-gamma">The night started at: <%= @night.start_time %></p>
 
-          <% @night.games.each_with_index do |game, index|%>
-            <div class="item-btn btn font-gamma"><%= link_to "#{ index + 1 }. Game", game_path(game) %></div>
-          <% end %>
-
-          <div class="list-name font-gamma"><%= @night.end_time %></div>
-          <div class="item-btn btn font-gamma"><%= link_to "Edit Night", edit_night_path(@night)%></div>
-          <div class="item-btn font-gamma"><%= link_to 'All Nights', nights_path(@night) %></div>
-        </div>
+    <%# ************** Display the Games of the Night ****** %>
+    <div class="container">
+      <h3 class="font-alpha">There were <%= @night.games.count %> games played!</h3>
+        <% @night.games.each_with_index do |game, index|%>
+          <div class="item-btn btn font-gamma"><%= link_to "#{ index + 1 }. Game", game_path(game) %></div>
+        <% end %>
     </div>
-  </div>
+  <p class="list-name font-gamma">The night ended at: <%= @night.end_time %></p>
+  <% if policy(@night).edit? %>
+    <div class="item-btn btn font-gamma"><%= link_to "Edit Night", edit_night_path(@night)%></div>
+  <% end %>
+  <div class="item-btn font-gamma"><%= link_to 'All Nights', nights_path(@night) %></div>
+</div>
