@@ -2,6 +2,7 @@
 
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
+  before_action :configure_permitted_parameters, if: :devise_controller?
   include Pundit::Authorization
 
   # Pundit: allow-list approach
@@ -19,5 +20,14 @@ class ApplicationController < ActionController::Base
 
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
+  end
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[avatar first_name last_name birthday first_game
+                                                         sign favorite_drink lucky_number bio wins losses])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[avatar first_name last_name birthday first_game
+                                                                sign favorite_drink lucky_number bio wins losses])
   end
 end

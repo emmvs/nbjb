@@ -7,6 +7,9 @@
       <ol>
         <div><p class="font-gamma">First Name: <%= @user.first_name %> </p></div>
         <div><p class="font-gamma">Last Name: <%= @user.last_name %> </p></div>
+        <% if cl_image_tag @user.avatar %>
+          <%= cl_image_tag @user.avatar, height: 300, width: 400, crop: :fill %>
+        <% end %>
         <div><p class="font-gamma">Bio: <%= @user.bio %>
         <div><p class="font-gamma">Email: <%= @user.email %>
         <div><p class="font-gamma">Birthday: <%= @user.birthday  %>
