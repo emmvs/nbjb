@@ -80,3 +80,6 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem "sprockets-rails"
+
+# Pry Bye Bug 🪲
+gem 'pry', '~> 0.13.1'
