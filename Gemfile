@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
+
 # Ruby
 ruby "3.1.2"
 # gem 'rails', '~> 6.1.4', '>= 6.1.4.6'
@@ -15,6 +15,8 @@ gem 'devise'
 gem "pundit"
 # Stimulus
 gem 'stimulus-rails'
+# Cloudinary
+gem "cloudinary"
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
@@ -78,3 +80,6 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem "sprockets-rails"
+
+# Pry Bye Bug 🪲
+gem 'pry', '~> 0.13.1'

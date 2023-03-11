@@ -1,4 +1,5 @@
 # app/controllers/users_controller.rb
+require 'pry-byebug'
 
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
@@ -28,6 +29,7 @@ class UsersController < ApplicationController
 
   def show
     authorize @user
+    # binding.pry
   end
 
   def edit
@@ -50,17 +52,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(
-      :first_name,
-      :last_name,
-      :birthday,
-      :first_game,
-      :sign,
-      :favorite_drink,
-      :lucky_number,
-      :bio,
-      :wins,
-      :losses
-    )
+    params.require(:user).permit(:first_name, :last_name, :avatar, :birthday, :first_game,
+                                 :sign, :favorite_drink, :lucky_number, :bio, :wins, :losses)
   end
 end

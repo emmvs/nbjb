@@ -4,6 +4,9 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :avatar, as: :file %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -15,6 +18,10 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.input :birthday %>
+    <%= f.input :favorite_drink %>
+    <%= f.input :lucky_number %>
+    <%= f.input :bio %>
   </div>
 
   <div class="form-actions">

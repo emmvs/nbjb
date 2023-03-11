@@ -39,7 +39,7 @@
             <%= link_to "All Nights", nights_path, class: "dropdown-item" %>
             <%= link_to "Places", places_path, class: "dropdown-item" %>
             <%= link_to "Bitches", users_path, class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
       <% else %>
