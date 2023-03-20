@@ -117,6 +117,26 @@ nadja = User.create!(
   bio: "I am Nadja and I hate Santiana"
 )
 
+avatars = [
+  "https://kitt.lewagon.com/placeholder/users/emmvs",
+  "https://kitt.lewagon.com/placeholder/users/FilleTP",
+  "https://res.cloudinary.com/dk5glvhr6/image/upload/v1679317384/nb-jb/Screen_Shot_2023-03-20_at_13.00.17_r33lvp.png",
+  "https://shootingphotodotbaindelumieredotcom.files.wordpress.com/2020/03/photo-de-profil-naturelle.jpg?w=584",
+  "https://www.portraitprofessionnel.fr/wp-content/uploads/2021/03/Photographe-avocat.jpg",
+  "https://i.pinimg.com/originals/e6/1a/2a/e61a2ad501fee76176ffbb3097da2741.jpg",
+  "https://www.francklods.fr/wp-content/uploads/2022/08/DSC_8048-Modifier-scaled.jpg",
+]
+
+puts "Seeding 🌱 " + avatars.count.to_s + " avatars of them Ladiesss 📸"
+
+User.all.each_with_index do |user, index|
+  file = URI.open(avatars[index])
+  user.photo.attach(io: file, filename: "avatar.png", content_type: "image/png")
+  user.save
+end
+
+puts "Created Users 🧕🏽 👩🏼 💃🏽 👩‍✈️"
+
 # 3. Create new Places
 Place.create!(
   name: "Bechereck",
