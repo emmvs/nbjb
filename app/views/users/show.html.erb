@@ -7,7 +7,7 @@
       <ol>
         <div><p class="font-gamma">First Name: <%= @user.first_name %> </p></div>
         <div><p class="font-gamma">Last Name: <%= @user.last_name %> </p></div>
-        <% if cl_image_tag @user.avatar.key %>
+        <% if @user.avatar.attached? %>
           <%= cl_image_tag @user.avatar.key, height: 300, width: 400, crop: :fill %>
         <% else %>
           <img src="https://thumbs.dreamstime.com/b/user-woman-icon-lady-s-profile-female-web-sign-flat-art-object-black-white-silhouette-girl-business-suit-avatar-picture-173159996.jpg" alt="">

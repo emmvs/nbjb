@@ -131,7 +131,7 @@ puts "Seeding 🌱 " + avatars.count.to_s + " avatars of them Ladiesss 📸"
 
 User.all.each_with_index do |user, index|
   file = URI.open(avatars[index])
-  user.photo.attach(io: file, filename: "avatar.png", content_type: "image/png")
+  user.avatar.attach(io: file, filename: "avatar.png", content_type: "image/png")
   user.save
 end
 
