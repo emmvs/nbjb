@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "about", to: "pages#about"
   get "contact", to: "pages#contact"
 
-  resources :users
+  resources :profiles
   resources :places
   resources :nights
   resources :games

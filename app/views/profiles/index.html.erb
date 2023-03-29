@@ -10,12 +10,13 @@
           <div class="card card-nbjb bg-light mb-3 mt-3 border-left-primary shadow h-100 py-2">
             <img class="card-img-top" src="https://images.unsplash.com/photo-1544281153-6603be88b354?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmlsbGlhcmRzfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="Billard card image">
             <div class="card-body">
-              <div class="card-text list-name mb-1 text-xs font-gamma"><%= link_to user.first_name, user_path(user)  %></div>
+              <div class="card-text list-name mb-1 text-xs font-gamma"><%= link_to user.first_name, profile_path(user)  %></div>
             </div>
           </div>
         </div>
       <% end %>
     </div>
   </div>
-  <div class="item-btn"><%= link_to 'Add new User', new_user_path(@user) %></div>
+  <%# TODO Policy: Only be able to create new User if Admin %>
+  <div class="item-btn"><%= link_to 'Add new Profile', new_profile_path %></div>
 </div>
