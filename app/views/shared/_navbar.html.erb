@@ -17,8 +17,8 @@
         <li class="font-gamma<%= active?(dashboards_dashboard_path)%>">
         <%= link_to "HOME", dashboards_dashboard_path, class: "btn-navbar"  %>
         </li>
-        <li class="font-gamma<%= active?(users_path)%>">
-         <%= link_to "BITCHES", users_path, class: "btn-navbar"  %>
+        <li class="font-gamma<%= active?(profiles_path)%>">
+         <%= link_to "BITCHES", profiles_path, class: "btn-navbar"  %>
         </li>
         <li class="font-gamma<%= active?(nights_path)%>">
          <%= link_to "NIGHTS", nights_path, class: "btn-navbar"  %>
@@ -38,7 +38,7 @@
             <%= link_to "Plan Night", new_night_path, class: "dropdown-item" %>
             <%= link_to "All Nights", nights_path, class: "dropdown-item" %>
             <%= link_to "Places", places_path, class: "dropdown-item" %>
-            <%= link_to "Bitches", users_path, class: "dropdown-item" %>
+            <%= link_to "Bitches", profiles_path, class: "dropdown-item" %>
             <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
