@@ -9,4 +9,12 @@ class UserPolicy < ApplicationPolicy
   def show?
     true
   end
+
+  def allowed_destroy?
+    admin?
+  end
+
+  def admin?
+    record.admin?
+  end
 end

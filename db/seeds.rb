@@ -96,6 +96,7 @@ santiana = User.create!(
   # phone_number: "+14154259973",
   # birthday: 19990507120000,
   # first_game: 20210507120000,
+  role: 0,
   sign: "Gemini♊︎",
   favorite_drink: "Sours🍋",
   lucky_number: 23,
@@ -268,7 +269,7 @@ BitchBookEntry.create!(
         English Billiards, played with three balls and six
         pockets on a large rectangular table.",
   rating: 8,
-  user: User.first
+  user: emma
 )
 
 BitchBookEntry.create!(
@@ -283,7 +284,7 @@ BitchBookEntry.create!(
   The other 12 balls must be placed in alternation,
   including the one at the top corner of the triangle. Easy, right?",
   rating: 9,
-  user: User.last
+  user: emma
 )
 
 # 6. Show created Seeds
