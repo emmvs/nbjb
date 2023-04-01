@@ -30,6 +30,10 @@ class BitchBookEntryPolicy < ApplicationPolicy
     destroy?
   end
 
+  def approved?
+    user.admin?
+  end
+
   def destroy?
     record.user == user
   end
