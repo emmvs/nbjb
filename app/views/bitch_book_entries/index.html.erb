@@ -1,10 +1,5 @@
 <%# app/views/bitch_book_entries/index.html.erb %>
 
-<%# TODO ************** %>
-<%# Depending on Role you have different feutues here%>
-<%# Feature Add Comments, Role Admin, Player %>
-<%# Feature Add Ratings, Role Admin, Player  %>
-
 <div class="container-bitch-book-enties">
   <h1 class="font-beta">The Bitchbook</h1>
 
@@ -15,6 +10,11 @@
           <div class="list-name font-gamma"><%= bitch_book_entry.title %></div>
           <div><%= link_to 'Show', bitch_book_entry %></div>
           <div><%= link_to 'Edit', edit_bitch_book_entry_path(bitch_book_entry) %></div>
+          <% if bitch_book_entry.approved?  %>
+            <div><%= link_to "Disapprove", approve_bitch_book_entry_path(bitch_book_entry), data: { "turbo-method": :patch }  %></div>
+          <% else %>
+            <div><%= link_to "Approve", approve_bitch_book_entry_path(bitch_book_entry), data: { "turbo-method": :patch }  %></div>
+          <% end %>
           <div><%= link_to 'Destroy', bitch_book_entry, data: { "turbo-method": :delete, turbo_confirm: 'Are you sure? 🎱' } %></div>
       <% end %>
   </div>

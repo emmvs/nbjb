@@ -1,7 +1,7 @@
 # app/controllers/bitchbookentries_controller.rb
 
 class BitchBookEntriesController < ApplicationController
-  before_action :set_bitch_book_entry, only: %i[show edit update destroy]
+  before_action :set_bitch_book_entry, only: %i[show edit update approved destroy]
   before_action :authorize_bitch_book_entry, only: %i[show edit update]
 
   # GET /bitch_book_entries or /bitch_book_entries.json
@@ -31,6 +31,12 @@ class BitchBookEntriesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def approved
+    authorize @bitch_book_entry
+    @bitch_book_entry.update(approved: true)
+    redirect_to bitch_book_entries_path
   end
 
   # PATCH/PUT /bitch_book_entries/1 or /bitch_book_entries/1.json

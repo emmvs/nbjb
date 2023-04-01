@@ -2,7 +2,11 @@ class BitchBookEntryPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve
-      scope.all
+      if user.admin?
+        scope.all
+      else
+        scope.where(approved: true)
+      end
     end
   end
 
@@ -24,6 +28,10 @@ class BitchBookEntryPolicy < ApplicationPolicy
 
   def update?
     destroy?
+  end
+
+  def approved?
+    user.admin?
   end
 
   def destroy?
