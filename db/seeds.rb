@@ -119,12 +119,11 @@ nadja = User.create!(
 
 avatars = [
   "https://kitt.lewagon.com/placeholder/users/emmvs",
-  "https://kitt.lewagon.com/placeholder/users/FilleTP",
-  "https://res.cloudinary.com/dk5glvhr6/image/upload/v1679317384/nb-jb/Screen_Shot_2023-03-20_at_13.00.17_r33lvp.png",
-  "https://shootingphotodotbaindelumieredotcom.files.wordpress.com/2020/03/photo-de-profil-naturelle.jpg?w=584",
-  "https://www.portraitprofessionnel.fr/wp-content/uploads/2021/03/Photographe-avocat.jpg",
-  "https://i.pinimg.com/originals/e6/1a/2a/e61a2ad501fee76176ffbb3097da2741.jpg",
-  "https://www.francklods.fr/wp-content/uploads/2022/08/DSC_8048-Modifier-scaled.jpg",
+  "https://res.cloudinary.com/dk5glvhr6/image/upload/v1680369074/nb-jb/marlene_zxvf7p.jpg",
+  "https://res.cloudinary.com/dk5glvhr6/image/upload/v1679317384/nb-jb/florence.png",
+  "https://res.cloudinary.com/dk5glvhr6/image/upload/v1680369221/nb-jb/ida_dnyft8.jpg",
+  "https://res.cloudinary.com/dk5glvhr6/image/upload/v1680370155/nb-jb/santiana_encwl3.jpg",
+  "https://res.cloudinary.com/dk5glvhr6/image/upload/v1680369396/nb-jb/nadja_mdt9cd.jpg"
 ]
 
 puts "Seeding 🌱 " + avatars.count.to_s + " avatars of them Ladiesss 📸"
@@ -288,11 +287,11 @@ BitchBookEntry.create!(
 )
 
 # 6. Show created Seeds
-p "Created #{User.count} Bitches! 🎱"
+puts "Created #{User.count} Bitches! 🎱"
 sleep(1)
-p "Created #{Place.count} Places! 🎱"
+puts "Created #{Place.count} Places! 🎱"
 sleep(1)
-p "Created #{Night.count} Nights! 🎱"
+puts "Created #{Night.count} Nights! 🎱"
 sleep(1)
-p "Created #{BitchBookEntry.count} Bitch Book Entries! 🎱"
+puts "Created #{BitchBookEntry.count} Bitch Book Entries! 🎱"
 puts "🎱🎱🎱🎱🎱 Amazing! We are done 🎱🎱🎱🎱🎱"
