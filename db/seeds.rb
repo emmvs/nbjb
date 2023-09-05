@@ -1,16 +1,5 @@
-# db/seeds.rb
-
 require "open-uri"
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-# 1. Delete all Data from Database
 puts "Cleaning Database! 🧹"
 
 Player.destroy_all
@@ -22,7 +11,6 @@ User.destroy_all
 sleep(2)
 puts "Database is clean! 🧼"
 
-# 2. Create new Users (aka Bitches)
 emma = User.create!(
   email: "emma@test.com",
   password: "123456",
@@ -137,7 +125,7 @@ end
 
 puts "Created Users 🧕🏽 👩🏼 💃🏽 👩‍✈️"
 
-# 3. Create new Places
+# Places
 Place.create!(
   name: "Bechereck",
   address: "Okerstraße 35, 12049 Berlin",
@@ -182,7 +170,7 @@ billard_house = Place.create!(
   user_id: nadja.id
 )
 
-# 4. Create new Nights 🌌
+# Nights 🌌
 first_night = Night.create!(
   title: "First NB-JB Game Ever! 🎱",
   start_time: Time.new(2020, 5, 4, 15, 0, 0, '+02:00'),
@@ -230,7 +218,6 @@ emmas_game = Game.create!(
   night_id: first_night.id
 )
 
-# For each user in the db there needs to be one player belonging to the game/user
 User.all.each do |user|
   Player.create!(user:, game: emmas_game)
 end
@@ -242,7 +229,6 @@ idas_game = Game.create!(
   night: first_night
 )
 
-# For each user in the db there needs to be one player belonging to the game/user
 User.all.each do |user|
   Player.create!(user:, game: idas_game)
 end
