@@ -41,18 +41,9 @@ bundle install
 #### 2. You don't have to be good al billards to play.
 
 
-
-
 ## Support
 
 For support, email emma@ruenzel.de or join our Whatsapp group.
-
-
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
-
-
-
-
 
 
 ## Authors
