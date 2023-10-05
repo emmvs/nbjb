@@ -1,3 +1,8 @@
+// External Stuff
+@import "bootstrap";
+@import "font-awesome";
+@import "simple_calendar";
+
 // Graphical Variables
 @import "config/fonts";
 @import "config/colors";
@@ -6,29 +11,9 @@
 // Components
 @import "components/index";
 
-@font-face {
-  font-family: "Space Grotesk";
-  src: url("/app/assets/fonts/Space_Grotesk/");
-}
-
-@font-face {
-  font-family: "1up";
-  src: url("/app/assets/fonts/1up/");
-}
-
-// External Stuff
-@import "bootstrap";
-@import "font-awesome";
-@import "simple_calendar";
-
-// Your SCSS Partials
-@import "components/index";
+// Partials
 @import "pages/index";
-
-// PLACES
 @import "places/form_place";
-
-// BITCH BOOK
 @import "bitchbook/style";
 
 body {

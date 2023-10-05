@@ -30,10 +30,6 @@ gem 'jbuilder'
 gem 'redis', '~> 4.0'
 # Geocoder
 gem "geocoder"
-# Calender
-gem "simple_calendar", "~> 2.4"
-# Bootstrap
-gem "bootstrap", "~> 5.2"
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -41,18 +37,17 @@ gem "bootstrap", "~> 5.2"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-# Reduces boot times through caching; required in config/boot.rb
+gem "bootstrap", "~> 5.2"
 gem 'bootsnap', '>= 1.4.4', require: false
-gem 'autoprefixer-rails', '10.2.5'
+gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
+gem "simple_calendar", "~> 2.4"
 gem "simple_form"
 
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
-
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
@@ -68,19 +63,14 @@ group :development do
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
-  # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-
 gem "sprockets-rails"
 
-# Pry Bye Bug 🪲
 gem 'pry', '~> 0.13.1'
-
 gem "importmap-rails", "~> 1.2"
