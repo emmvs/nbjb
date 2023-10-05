@@ -4,12 +4,11 @@ class PlacesController < ApplicationController
   before_action :set_place, only: %i[show edit update destroy]
 
   def index
-    @places = policy_scope(Place)
     # if params[:query].present?
     #   @query = params[:query]
     #   @places = Place.where("name ILIKE ?", "%#{params[:query]}%")
     # else
-    #   @places = Place.all
+      @places = Place.all
     # end
 
     # The `geocoded` scope filters only places with coordinates
@@ -23,12 +22,10 @@ class PlacesController < ApplicationController
 
   def new
     @place = Place.new
-    authorize @place
   end
 
   def create
     @place = Place.new(place_params)
-    authorize @place
 
     @place.user = current_user
     if @place.save
@@ -38,11 +35,9 @@ class PlacesController < ApplicationController
     end
   end
 
-  def show
-  end
+  def show; end
 
-  def edit
-  end
+  def edit; end
 
   def update
     @place.update(place_params)
@@ -58,7 +53,6 @@ class PlacesController < ApplicationController
 
   def set_place
     @place = Place.find(params[:id])
-    authorize @place
   end
 
   def place_params

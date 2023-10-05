@@ -37,5 +37,23 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
+
+    <nav id="bottom-navbar" data-controller="bottom-navbar" class="tab" data-selected="2">
+      <div class="icons">
+        <div data-index="1" class="icon fad fa-home"></div>
+        <div data-index="2" class="icon fal fa-plus"></div>
+        <div data-index="3" class="icon fad fa-user fa-swap-opacity"></div>
+      </div>
+      <div class="bar">
+        <div class="cap"></div>
+        <div class="middle">
+          <div class="side"></div>
+          <div class="circle"></div>
+          <div class="side"></div>
+        </div>
+        <div class="cap"></div>
+      </div>
+    </nav>
+
   </body>
 </html>

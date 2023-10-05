@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-
-  constraints ->(request) { request.env['warden'].user } do
-    root 'dashboards#dashboard', as: :authenticated_root
-  end
-  root to: 'pages#home'
+  root to: "pages#home"
+  resources :dashboards, only: :index
 
   get "about", to: "pages#about"
   get "contact", to: "pages#contact"

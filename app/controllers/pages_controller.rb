@@ -1,14 +1,10 @@
 # app/controllers/pages_controller.rb
 
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
 
-  def home
-  end
+  def home; end
 
-  def about
-  end
+  def about; end
 
-  def contact
-  end
+  def contact; end
 end
