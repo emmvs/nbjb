@@ -1,22 +1,25 @@
-<%# app/views/bitch_book_entries/index.html.erb %>
-
-<div class="container-bitch-book-enties">
+<div class="p-5 mt-3">
   <h1 class="font-beta">The Bitchbook</h1>
-
-<%# ************** Display Bitch Book Entries ************** %>
-  <div class="container">
-      <% @bitch_book_entries.each do |bitch_book_entry| %>
-          <div class="card border-left-primary shadow h-100 py-2">
-          <div class="list-name font-gamma"><%= bitch_book_entry.title %></div>
-          <div><%= link_to 'Show', bitch_book_entry %></div>
-          <div><%= link_to 'Edit', edit_bitch_book_entry_path(bitch_book_entry) %></div>
-          <% if bitch_book_entry.approved?  %>
-            <div><%= link_to "Disapprove", approve_bitch_book_entry_path(bitch_book_entry), data: { "turbo-method": :patch }  %></div>
-          <% else %>
-            <div><%= link_to "Approve", approve_bitch_book_entry_path(bitch_book_entry), data: { "turbo-method": :patch }  %></div>
-          <% end %>
-          <div><%= link_to 'Destroy', bitch_book_entry, data: { "turbo-method": :delete, turbo_confirm: 'Are you sure? 🎱' } %></div>
-      <% end %>
-  </div>
+    <div class="container p-5">
+        <% @bitch_book_entries.each do |bitch_book_entry| %>
+            <div class="card shadow h-100 py-2 p-5 m-4">
+              <div class="list-name font-gamma">
+                <%= bitch_book_entry.title %>
+              </div>
+                <div><%= link_to 'Show', bitch_book_entry, class: "btn" %></div>
+                <div><%= link_to 'Edit', edit_bitch_book_entry_path(bitch_book_entry), class: "btn"  %></div>
+                <div><%= link_to 'Destroy', bitch_book_entry, class: "btn", data: { "turbo-method": :delete, turbo_confirm: 'Are you sure? 🎱' } %></div>
+            </div>
+        <% end %>
+    </div>
+    <div class="p-3 m-4">
+      <%= link_to 'New Bitch Book Entry', new_bitch_book_entry_path, class: "btn" %>
+    </div>
 </div>
-<%= link_to 'New Bitch Book Entry', new_bitch_book_entry_path %>
+
+
+<%# <#% if bitch_book_entry.approved?  %>
+  <%#= link_to "Disapprove", approve_bitch_book_entry_path(bitch_book_entry), data: { "turbo-method": :patch }  %>
+<%# <#% else %>
+  <%#= link_to "Approve", approve_bitch_book_entry_path(bitch_book_entry), data: { "turbo-method": :patch }  %>
+<%# <#% end %>
