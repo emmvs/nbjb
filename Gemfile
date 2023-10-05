@@ -17,7 +17,6 @@ gem "pundit"
 gem 'stimulus-rails'
 # Cloudinary
 gem "cloudinary"
-
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -34,7 +33,7 @@ gem "geocoder"
 # Calender
 gem "simple_calendar", "~> 2.4"
 # Bootstrap
-# gem 'bootstrap', '~> 5.2.2'
+gem "bootstrap", "~> 5.2"
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -44,10 +43,10 @@ gem "simple_calendar", "~> 2.4"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
-
 gem 'autoprefixer-rails', '10.2.5'
-gem 'font-awesome-sass'
-gem 'simple_form', github: 'heartcombo/simple_form'
+gem "font-awesome-sass", "~> 6.1"
+gem "simple_form"
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
@@ -83,3 +82,5 @@ gem "sprockets-rails"
 
 # Pry Bye Bug 🪲
 gem 'pry', '~> 0.13.1'
+
+gem "importmap-rails", "~> 1.2"

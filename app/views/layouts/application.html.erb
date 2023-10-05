@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
     <!-- Geocoding cdn -->
@@ -30,6 +30,7 @@
     <meta property="og:image" content="nbjb.jpg">
     <meta property="og:description" content="NBJB is the best Billard Club for Women. Rule one: Never apologize">
     <meta property="og:site_name" content="No Balls – Just Bitches"/>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>

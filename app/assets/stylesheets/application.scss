@@ -1,9 +1,10 @@
-// app/assets/stylesheets/application.scss
-
-// Graphical Variables & Fonts
+// Graphical Variables
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
+
+// Components
+@import "components/index";
 
 @font-face {
   font-family: "Space Grotesk";
@@ -15,65 +16,22 @@
   src: url("/app/assets/fonts/1up/");
 }
 
-// External Libraries
-// @import "bootstrap/scss/bootstrap";
+// External Stuff
+@import "bootstrap";
 @import "font-awesome";
 @import "simple_calendar";
 
-// Your CSS Partials
+// Your SCSS Partials
 @import "components/index";
 @import "pages/index";
 
 // PLACES
 @import "places/form_place";
 
-// BITCHBOOK
-@import "bitchbook/style.scss";
-
-// ********* NO BALLS - JUST BITCHES *********
-// ********* Design & Font Classes *********
+// BITCH BOOK
+@import "bitchbook/style";
 
 body {
   background-color: rgb(170, 216, 246);
   background-size: cover;
-}
-
-.font-alpha {
-  position: relative;
-  font-family: $primary-font;
-  font-size: $font-size-64;
-  color: $font-color;
-}
-
-.font-beta {
-  position: relative;
-  font-family: $primary-font;
-  font-size: $font-size-48;
-  font-weight: $font-weigh--extra;
-  text-transform: uppercase;
-  color: $font-color;
-}
-
-.font-delta {
-  position: relative;
-  font-family: $primary-font;
-  font-size: $font-size-36;
-  font-weight: $font-weigh--bold;
-  color: $font-color;
-  margin-top: .5rem;
-  margin-bottom: 1rem;
-  width: fit-content;
-  z-index: 2;
-}
-
-.font-gamma {
-  font-family: $primary-font;
-  font-size: $font-size-24;
-  font-weight: $font-weigh--bold;
-  color: $font-color;
-  margin-top: .5rem;
-  margin-bottom: .7rem;
-  position: relative;
-  width: fit-content;
-  z-index: 2;
 }
