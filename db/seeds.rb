@@ -240,12 +240,11 @@ flos_game = Game.create!(
   night: first_night
 )
 
-# For each user in the db there needs to be one player belonging to the game/user
 User.all.each do |user|
   Player.create!(user:, game: flos_game)
 end
 
-# 5. Create new Bitch Book Entries
+# Bitch Book Entries
 BitchBookEntry.create!(
   topic: "History",
   title: "When was Billard invented?",
@@ -273,7 +272,6 @@ BitchBookEntry.create!(
   user: emma
 )
 
-# 6. Show created Seeds
 puts "Created #{User.count} Bitches! 🎱"
 sleep(1)
 puts "Created #{Place.count} Places! 🎱"

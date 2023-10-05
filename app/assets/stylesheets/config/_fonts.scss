@@ -17,9 +17,6 @@ $headers-font: "1up", "1up", "sans-serif";
 // }
 // $my-font: "Font Name";
 
-// ********* No Balls - Just Bitches *********
-// ********* Fonts *********
-
 $primary-font: "1up", "Arial Black", "sans-serif"; // 300, 400
 $secondary-font: "Space Grotesk", "Arial Black", "sans-serif"; // 300, 400, 600
 $font-weigh--light: 400;
@@ -32,3 +29,44 @@ $font-size-36: 36px; //XL
 $font-size-48: 48px; //XXL
 $font-size-64: 64px; //XXL
 $font-color: #181316;
+
+
+.font-alpha {
+  position: relative;
+  font-family: $primary-font;
+  font-size: $font-size-64;
+  color: $font-color;
+}
+
+.font-beta {
+  position: relative;
+  font-family: $primary-font;
+  font-size: $font-size-48;
+  font-weight: $font-weigh--extra;
+  text-transform: uppercase;
+  color: $font-color;
+}
+
+.font-delta {
+  position: relative;
+  font-family: $primary-font;
+  font-size: $font-size-36;
+  font-weight: $font-weigh--bold;
+  color: $font-color;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  width: fit-content;
+  z-index: 2;
+}
+
+.font-gamma {
+  font-family: $primary-font;
+  font-size: $font-size-24;
+  font-weight: $font-weigh--bold;
+  color: $font-color;
+  margin-top: .5rem;
+  margin-bottom: .7rem;
+  position: relative;
+  width: fit-content;
+  z-index: 2;
+}
