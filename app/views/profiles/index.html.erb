@@ -1,26 +1,22 @@
-<%# app/views/users/index.html.erb %>
-<div class="container-users">
+<div>
   <h1 class="font-beta">Bitches</h1>
-
-  <%# ************** Display Users/Bitches ************** %>
-  <div class="container">
-    <div class="row justify-content-center">
-      <% @users.each do |user| %>
-        <div class ="col-8 col-sm-6 col-md-4 m-4">
-          <div class="card card-nbjb bg-light mb-3 mt-3 border-left-primary shadow h-100 py-2">
-              <% if user.avatar.attached? %>
-              <%= cl_image_tag user.avatar.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
-              <% else %>
-              <img src="https://thumbs.dreamstime.com/b/user-woman-icon-lady-s-profile-female-web-sign-flat-art-object-black-white-silhouette-girl-business-suit-avatar-picture-173159996.jpg" alt="">
-              <% end %>
-            <div class="card-body">
-              <div class="card-text list-name mb-1 text-xs font-gamma"><%= link_to user.first_name, profile_path(user)  %></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <% @users.each do |user| %>
+          <div class ="col-8 col-sm-6 col-md-4 m-4">
+            <div class="card card-nbjb bg-light mb-3 mt-3 border-left-primary shadow h-100 py-2">
+                <% if user.avatar.attached? %>
+                <%= cl_image_tag user.avatar.key, height: 100, width: 400, crop: :fill, class: "card-img-top" %>
+                <% else %>
+                <img src="https://thumbs.dreamstime.com/b/user-woman-icon-lady-s-profile-female-web-sign-flat-art-object-black-white-silhouette-girl-business-suit-avatar-picture-173159996.jpg" alt="">
+                <% end %>
+              <div class="card-body">
+                <div class="card-text list-name mb-1 text-xs font-gamma"><%= link_to user.first_name, profile_path(user)  %></div>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
-  <%# TODO Policy: Only be able to create new User if Admin %>
   <div class="item-btn"><%= link_to 'Add new Profile', new_profile_path %></div>
 </div>
