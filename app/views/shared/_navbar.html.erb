@@ -14,14 +14,14 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="font-gamma<%= active?(dashboards_dashboard_path)%>">
-        <%= link_to "HOME", dashboards_dashboard_path, class: "btn-navbar"  %>
+        <li class="font-gamma<%= active?(root_path)%>">
+        <%= link_to "HOME", root_path, class: "btn-navbar"  %>
         </li>
         <li class="font-gamma<%= active?(profiles_path)%>">
-         <%= link_to "BITCHES", profiles_path, class: "btn-navbar"  %>
+          <%= link_to "BITCHES", profiles_path, class: "btn-navbar"  %>
         </li>
         <li class="font-gamma<%= active?(nights_path)%>">
-         <%= link_to "NIGHTS", nights_path, class: "btn-navbar"  %>
+          <%= link_to "NIGHTS", nights_path, class: "btn-navbar"  %>
         </li>
         <li class="font-gamma<%= active?(places_path)%>">
         <%= link_to "PLACES", places_path, class: "btn-navbar"  %>
@@ -34,7 +34,7 @@
         <li class="nav-item dropdown">
           <%= image_tag "avatar.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <%= link_to "My Profile", dashboards_dashboard_path, class: "dropdown-item" %>
+            <%= link_to "My Profile", root_path, class: "dropdown-item" %>
             <%= link_to "Plan Night", new_night_path, class: "dropdown-item" %>
             <%= link_to "All Nights", nights_path, class: "dropdown-item" %>
             <%= link_to "Places", places_path, class: "dropdown-item" %>

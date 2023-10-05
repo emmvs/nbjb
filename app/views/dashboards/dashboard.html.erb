@@ -1,16 +1,8 @@
-<%# ? Loading Screen with Logo %>
 <div data-controller="loading_screen" class="loading-screen">
-  <%= image_tag "no-balls.png", class: "logo", alt: "Five Things Logo" %>
+  <%= image_tag "no-balls.png", class: "logo", alt: "NB-JB Logo" %>
 </div>
 
-<%# TODO ************** %>
-<%# TODO: Make The Dashboard editable/sortable %>
-<%# TODO: Create Calender View %>
-<%# TODO: Depending on Role you have different features here %>
-<%# > Feature Add Nights, Role Moderator, Admin %>
-<%# > Feature Add Places, Role User, Moderator or Admin %>
-
-<%# ********** DASHBOARD ********** %>
+<%# ********** DASHBOARD %>
 <div class="container-dashboard m-2 font-alpha">
   <div class="item-hello">
     <h2 class="font-beta">Hi, <%= current_user.first_name %>!</h2>
@@ -18,7 +10,7 @@
   </div>
   <br>
 
-  <%# ********** Calendar ********** %>
+  <%# ********** Calendar %>
   <div class="container font-gamma">
     <%= month_calendar(events: @nights) do |date, nights| %>
       <div class="day">
@@ -35,7 +27,7 @@
   </div>
   <br>
 
-  <%# ********** Sortable ********** %>
+  <%# ********** Sortable %>
   <div data-controller="sortable" id="results" class="sortable-container">
     <!-- Content Row -->
       <div class="col-xl-2 col-md-4 mb-4 item-lucky-number">
@@ -108,3 +100,10 @@
     </div>
   </div>
 </div>
+
+<%# TODO ************** %>
+<%# TODO: Make The Dashboard editable/sortable %>
+<%# TODO: Create Calender View %>
+<%# TODO: Depending on Role you have different features here %>
+<%# > Feature Add Nights, Role Moderator, Admin %>
+<%# > Feature Add Places, Role User, Moderator or Admin %>

@@ -1,23 +1,23 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500|Raleway:700,900");
-@import url("https: //fonts.googleapis.com/css?family=Space Grotesk:400,500");
+@import url('https://fonts.googleapis.com/css?family=Space+Grotesk:400,500');
 
 // Define fonts for body and headers
 $body-font: "Space Grotesk", "Arial Black", "sans-serif";
-$headers-font: "1up", "1up", "sans-serif";
+$headers-font: "Space Grotesk", "Arial Black", "sans-serif";
 
-// To use a font file (.woff) uncomment following lines
+// Other font face declaration example
 // @font-face {
 //   font-family: "Font Name";
 //   src: font-url('FontFile.eot');
 //   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
 //        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
+//        font-url('FontFile.ttf') format('truetype');
 // }
 // $my-font: "Font Name";
 
-$primary-font: "1up", "Arial Black", "sans-serif"; // 300, 400
+$primary-font: "Space Grotesk", "Arial Black", "sans-serif"; // 300, 400, 600
 $secondary-font: "Space Grotesk", "Arial Black", "sans-serif"; // 300, 400, 600
 $font-weigh--light: 400;
 $font-weigh--normal: 500;
@@ -29,7 +29,6 @@ $font-size-36: 36px; //XL
 $font-size-48: 48px; //XXL
 $font-size-64: 64px; //XXL
 $font-color: #181316;
-
 
 .font-alpha {
   position: relative;

@@ -291,7 +291,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  autoprefixer-rails (= 10.2.5)
+  autoprefixer-rails
   bootsnap (>= 1.4.4)
   bootstrap (~> 5.2)
   byebug
